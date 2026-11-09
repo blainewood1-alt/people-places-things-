@@ -322,8 +322,8 @@ def build_prints():
   <h1 class="page-title">Prints</h1>
   <p class="note">Every print is made to order on archival paper. Choose a size and click Buy to send me an order request, and I'll reply with the price and details. Prints ship in 5&ndash;7 days.</p>
   <nav class="chips view-tabs" aria-label="Print sections">
-    <a href="#sets" data-view="sets">Sets</a>
     <a href="#singles" data-view="singles" class="active" aria-current="true">Single prints</a>
+    <a href="#sets" data-view="sets">Sets</a>
   </nav>
   <section id="sets" class="tab-panel">
     <h2>Sets</h2>
