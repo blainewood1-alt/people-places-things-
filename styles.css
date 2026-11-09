@@ -32,3 +32,5 @@ footer{text-align:center;padding:32px;border-top:1px solid var(--line);font-fami
   .about{grid-template-columns:1fr;gap:24px}
   main{padding:32px 16px}
 }
+.h-link{text-decoration:none}
+.h-link:hover{text-decoration:underline;text-underline-offset:6px}
