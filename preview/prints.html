@@ -25,7 +25,7 @@
     <a href="#sets" data-view="sets">Sets</a>
     <a href="#singles" data-view="singles" class="active" aria-current="true">Single prints</a>
   </nav>
-  <section id="sets" hidden>
+  <section id="sets" class="tab-panel">
     <h2>Sets</h2>
     <p class="note">Related photos made to hang together. Buy the whole set, or pick any three.</p>
     <article class="set" data-gallery>
@@ -155,7 +155,7 @@
       </div>
     </article>
   </section>
-  <section id="singles" data-gallery>
+  <section id="singles" class="tab-panel" data-gallery>
     <h2>Single prints</h2>
     <div class="grid">
     <article class="print">
@@ -363,27 +363,6 @@
 </div>
 <script src="site.js"></script>
 <script>
-(function () {
-  var tabs = document.querySelectorAll('.view-tabs a');
-  function showView(v) {
-    document.getElementById('sets').hidden = v !== 'sets';
-    document.getElementById('singles').hidden = v !== 'singles';
-    tabs.forEach(function (t) {
-      var on = t.getAttribute('data-view') === v;
-      t.classList.toggle('active', on);
-      if (on) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current');
-    });
-  }
-  tabs.forEach(function (t) {
-    t.addEventListener('click', function (e) {
-      e.preventDefault();
-      var v = t.getAttribute('data-view');
-      showView(v);
-      history.replaceState(null, '', '#' + v);
-    });
-  });
-  showView(location.hash === '#sets' ? 'sets' : 'singles');
-})();
 document.querySelectorAll('.set, .print').forEach(function (card) {
   var btn = card.querySelector('.btn');
   btn.addEventListener('click', function () {

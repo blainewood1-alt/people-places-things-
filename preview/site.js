@@ -41,3 +41,30 @@
     if (e.key === 'ArrowRight') show(current + 1);
   });
 })();
+
+// Tab buttons (Portfolio galleries, Prints sets/singles): show only the
+// section for the highlighted button. A #id in the link picks the tab.
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.view-tabs a'));
+  if (!tabs.length) return;
+  var ids = tabs.map(function (t) { return t.getAttribute('data-view'); });
+  var start = tabs.filter(function (t) { return t.classList.contains('active'); })[0] || tabs[0];
+  function showView(v) {
+    ids.forEach(function (id) { document.getElementById(id).hidden = id !== v; });
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-view') === v;
+      t.classList.toggle('active', on);
+      if (on) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current');
+    });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      showView(t.getAttribute('data-view'));
+      history.replaceState(null, '', '#' + t.getAttribute('data-view'));
+    });
+  });
+  var hash = location.hash.slice(1);
+  showView(ids.indexOf(hash) > -1 ? hash : start.getAttribute('data-view'));
+  if (ids.indexOf(hash) > -1) window.scrollTo(0, 0);
+})();

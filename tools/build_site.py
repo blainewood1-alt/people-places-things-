@@ -267,11 +267,12 @@ def build_home():
 
 # ---------- Portfolio ----------
 def build_portfolio():
-    chips = "\n".join('    <a href="#%s">%s</a>' % (gid, e(name)) for gid, name, _, _ in GALLERIES)
+    chips = "\n".join('    <a href="#%s" data-view="%s"%s>%s</a>' % (gid, gid, ' class="active"' if i == 0 else "", e(name))
+                       for i, (gid, name, _, _) in enumerate(GALLERIES))
     secs = []
     for gid, name, blurb, photos in GALLERIES:
         figs = "\n".join("      <figure>%s</figure>" % img(p, zoom=True) for p in photos)
-        secs.append("""  <section class="gallery" id="%s" data-gallery>
+        secs.append("""  <section class="gallery tab-panel" id="%s" data-gallery>
     <h2>%s</h2>
     <p class="note">%s</p>
     <div class="masonry">
@@ -280,7 +281,7 @@ def build_portfolio():
   </section>""" % (gid, e(name), e(blurb), figs))
     body = """<main>
   <h1 class="page-title">Portfolio</h1>
-  <nav class="chips" aria-label="Galleries">
+  <nav class="chips view-tabs" aria-label="Galleries">
 %s
   </nav>
 %s
@@ -324,12 +325,12 @@ def build_prints():
     <a href="#sets" data-view="sets">Sets</a>
     <a href="#singles" data-view="singles" class="active" aria-current="true">Single prints</a>
   </nav>
-  <section id="sets" hidden>
+  <section id="sets" class="tab-panel">
     <h2>Sets</h2>
     <p class="note">Related photos made to hang together. Buy the whole set, or pick any three.</p>
 %s
   </section>
-  <section id="singles" data-gallery>
+  <section id="singles" class="tab-panel" data-gallery>
     <h2>Single prints</h2>
     <div class="grid">
 %s
@@ -338,27 +339,6 @@ def build_prints():
 </main>""" % ("\n".join(sets), "\n".join(singles))
     js = """
 <script>
-(function () {
-  var tabs = document.querySelectorAll('.view-tabs a');
-  function showView(v) {
-    document.getElementById('sets').hidden = v !== 'sets';
-    document.getElementById('singles').hidden = v !== 'singles';
-    tabs.forEach(function (t) {
-      var on = t.getAttribute('data-view') === v;
-      t.classList.toggle('active', on);
-      if (on) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current');
-    });
-  }
-  tabs.forEach(function (t) {
-    t.addEventListener('click', function (e) {
-      e.preventDefault();
-      var v = t.getAttribute('data-view');
-      showView(v);
-      history.replaceState(null, '', '#' + v);
-    });
-  });
-  showView(location.hash === '#sets' ? 'sets' : 'singles');
-})();
 document.querySelectorAll('.set, .print').forEach(function (card) {
   var btn = card.querySelector('.btn');
   btn.addEventListener('click', function () {
