@@ -320,16 +320,19 @@ def build_prints():
     body = """<main>
   <h1 class="page-title">Prints</h1>
   <p class="note">Every print is made to order on archival paper. Choose a size and click Buy to send me an order request, and I'll reply with the price and details. Prints ship in 5&ndash;7 days.</p>
-  <nav class="chips" aria-label="Print sections">
-    <a href="#sets">Sets</a>
-    <a href="#singles">Single prints</a>
-  </nav>
+  <div class="view-picker">
+    <label for="view">Show</label>
+    <select id="view">
+      <option value="sets">Print sets</option>
+      <option value="singles">Single prints</option>
+    </select>
+  </div>
   <section id="sets">
     <h2>Sets</h2>
     <p class="note">Related photos made to hang together. Buy the whole set, or pick any three.</p>
 %s
   </section>
-  <section id="singles" data-gallery>
+  <section id="singles" data-gallery hidden>
     <h2>Single prints</h2>
     <div class="grid">
 %s
@@ -338,6 +341,19 @@ def build_prints():
 </main>""" % ("\n".join(sets), "\n".join(singles))
     js = """
 <script>
+(function () {
+  var view = document.getElementById('view');
+  function showView(v) {
+    view.value = v;
+    document.getElementById('sets').hidden = v !== 'sets';
+    document.getElementById('singles').hidden = v !== 'singles';
+  }
+  view.addEventListener('change', function () {
+    showView(view.value);
+    history.replaceState(null, '', '#' + view.value);
+  });
+  showView(location.hash === '#singles' ? 'singles' : 'sets');
+})();
 document.querySelectorAll('.set, .print').forEach(function (card) {
   var btn = card.querySelector('.btn');
   btn.addEventListener('click', function () {
