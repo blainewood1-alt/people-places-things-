@@ -320,19 +320,16 @@ def build_prints():
     body = """<main>
   <h1 class="page-title">Prints</h1>
   <p class="note">Every print is made to order on archival paper. Choose a size and click Buy to send me an order request, and I'll reply with the price and details. Prints ship in 5&ndash;7 days.</p>
-  <div class="view-picker">
-    <label for="view">Show</label>
-    <select id="view">
-      <option value="sets">Print sets</option>
-      <option value="singles">Single prints</option>
-    </select>
-  </div>
-  <section id="sets">
+  <nav class="chips view-tabs" aria-label="Print sections">
+    <a href="#sets" data-view="sets">Sets</a>
+    <a href="#singles" data-view="singles" class="active" aria-current="true">Single prints</a>
+  </nav>
+  <section id="sets" hidden>
     <h2>Sets</h2>
     <p class="note">Related photos made to hang together. Buy the whole set, or pick any three.</p>
 %s
   </section>
-  <section id="singles" data-gallery hidden>
+  <section id="singles" data-gallery>
     <h2>Single prints</h2>
     <div class="grid">
 %s
@@ -342,17 +339,25 @@ def build_prints():
     js = """
 <script>
 (function () {
-  var view = document.getElementById('view');
+  var tabs = document.querySelectorAll('.view-tabs a');
   function showView(v) {
-    view.value = v;
     document.getElementById('sets').hidden = v !== 'sets';
     document.getElementById('singles').hidden = v !== 'singles';
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-view') === v;
+      t.classList.toggle('active', on);
+      if (on) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current');
+    });
   }
-  view.addEventListener('change', function () {
-    showView(view.value);
-    history.replaceState(null, '', '#' + view.value);
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      var v = t.getAttribute('data-view');
+      showView(v);
+      history.replaceState(null, '', '#' + v);
+    });
   });
-  showView(location.hash === '#singles' ? 'singles' : 'sets');
+  showView(location.hash === '#sets' ? 'sets' : 'singles');
 })();
 document.querySelectorAll('.set, .print').forEach(function (card) {
   var btn = card.querySelector('.btn');

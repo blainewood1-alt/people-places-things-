@@ -54,6 +54,7 @@ h2{font-size:1.8rem;margin:0 0 8px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 48px}
 .chips a{font-family:var(--sans);font-size:.88rem;text-decoration:none;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#fff}
 .chips a:hover{border-color:var(--text)}
+.chips a.active{background:var(--accent);border-color:var(--accent);color:#fff}
 .gallery{scroll-margin-top:110px}
 .masonry{columns:3 280px;column-gap:16px}
 .masonry figure{margin:0 0 16px;break-inside:avoid}
@@ -63,9 +64,6 @@ h2{font-size:1.8rem;margin:0 0 8px}
 
 /* prints */
 #sets,#singles{scroll-margin-top:110px}
-.view-picker{display:flex;align-items:center;gap:10px;margin:0 0 40px;font-family:var(--sans)}
-.view-picker label{font-size:.95rem;color:var(--muted)}
-.view-picker select{font:inherit;font-size:1rem;padding:9px 36px 9px 12px;border:1px solid var(--text);border-radius:2px;background:#fff}
 .set{display:flex;flex-direction:column-reverse;gap:18px;padding:32px 0;border-top:1px solid var(--line)}
 .set-strip{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:8px}
 .set-strip img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#ddd}
