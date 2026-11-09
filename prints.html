@@ -280,5 +280,49 @@ document.querySelectorAll('.print').forEach(function (card) {
   });
 });
 </script>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Full screen photo">
+  <button class="lb-close" aria-label="Close">&times;</button>
+  <button class="lb-prev" aria-label="Previous photo">&#8249;</button>
+  <img alt="">
+  <p></p>
+  <button class="lb-next" aria-label="Next photo">&#8250;</button>
+</div>
+<script>
+(function () {
+  var box = document.getElementById('lightbox');
+  var big = box.querySelector('img');
+  var caption = box.querySelector('p');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.print'));
+  var current = 0;
+  function show(i) {
+    current = (i + cards.length) % cards.length;
+    var img = cards[current].querySelector('img');
+    big.src = img.src;
+    big.alt = img.alt;
+    caption.textContent = cards[current].querySelector('h3').textContent;
+  }
+  function close() {
+    box.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  cards.forEach(function (card, i) {
+    card.querySelector('img').addEventListener('click', function () {
+      show(i);
+      box.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  box.querySelector('.lb-close').addEventListener('click', close);
+  box.querySelector('.lb-prev').addEventListener('click', function (e) { e.stopPropagation(); show(current - 1); });
+  box.querySelector('.lb-next').addEventListener('click', function (e) { e.stopPropagation(); show(current + 1); });
+  box.addEventListener('click', function (e) { if (e.target === box || e.target === big) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!box.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+})();
+</script>
 </body>
 </html>
