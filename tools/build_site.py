@@ -128,12 +128,10 @@ def G(*titles):
 
 GALLERIES = [
     ("people", "People", "Strangers, neighbors and lone figures in the light.", G(
-        "Long Shadow", "The Cowboy", "Look Left", "The Barber", "Sun Shield", "Looking Up", "Lone Angler",
-        "Bench in the Light", "Waiting at MARTA", "Morning Walk", "In the Window", "Window Shopping",
-        "Gray Beanie", "Red Umbrella", "Leap", "Three on a Wall", "Welcome to Inman Park", "Surf Casters",
-        "Platform", "The Fisherman", "Into the Light", "Two at Dusk", "Stone Steps", "Splash Pad",
-        "Walk with the Dog", "Sun Seeker", "On the Edge", "Paddle Out", "Angler, Blue Hour",
-        "Walker on the Shore", "Red Wall, Blue Sky")),
+        "Long Shadow", "The Cowboy", "The Barber", "Looking Up", "Lone Angler",
+        "Bench in the Light", "Morning Walk", "In the Window", "Window Shopping",
+        "Gray Beanie", "Red Umbrella", "Leap", "Three on a Wall", "Platform", "The Fisherman", "Into the Light", "Two at Dusk", "Stone Steps", "Splash Pad",
+        "Sun Seeker", "On the Edge", "Paddle Out", "Walker on the Shore")),
     ("places", "Places", "Atlanta from above and below, the Gulf Coast, Yellowstone and Vietnam.", G(
         "Karst Valley", "Skyline Rays", "Lone Cypress", "Grand Prismatic", "City Lights", "Windswept",
         "Old Faithful", "Pier at Sunset", "Under the Bridge", "Golden Morning", "Morning Glory", "Into the Fog",
