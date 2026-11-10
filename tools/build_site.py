@@ -269,7 +269,7 @@ def page(fname, title, body, desc, lightbox=False, extra_js=""):
 <meta name="description" content="%s">
 <link rel="stylesheet" href="site.css">
 </head>
-<body>
+<body id="top">
 <header class="site-header">
   <a class="logo" href="index.html">Blaine Wood Photo<span>People + Places + Things</span></a>
   <nav aria-label="Main">
@@ -351,6 +351,7 @@ def build_portfolio():
   </nav>
 %s
   <p class="cta">Like something you see? <a href="prints.html">Most of these are available as prints.</a></p>
+  <p class="to-top"><a class="btn btn-outline" href="#top">Back to top &uarr;</a></p>
 </main>""" % (chips, "\n".join(secs))
     page("portfolio.html", "Portfolio | Blaine Wood Photo", body,
          "Galleries of street, signs and neon, places, silhouettes, faces and film photography by Blaine Wood.",
@@ -401,6 +402,7 @@ def build_prints():
 %s
     </div>
   </section>
+  <p class="to-top"><a class="btn btn-outline" href="#top">Back to top &uarr;</a></p>
 </main>""" % ("\n".join(sets), "\n".join(singles))
     js = """
 <script>
