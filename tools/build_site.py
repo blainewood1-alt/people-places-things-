@@ -130,7 +130,7 @@ GALLERIES = [
     ("people", "People", "Strangers, neighbors and lone figures in the light.", G(
         "Long Shadow", "The Cowboy", "The Barber", "Looking Up", "Lone Angler",
         "Bench in the Light", "Morning Walk", "In the Window", "Window Shopping",
-        "Gray Beanie", "Red Umbrella", "Platform", "The Fisherman", "Into the Light", "Two at Dusk", "Stone Steps", "Splash Pad",
+        "Gray Beanie", "Platform", "The Fisherman", "Into the Light", "Two at Dusk", "Stone Steps", "Splash Pad",
         "Sun Seeker", "On the Edge", "Paddle Out") + [
         F("peace-dove", "A man jogging past a mural of a white dove and a parked car", "Peace Dove"),
         F("platinum", "A platinum-blonde woman in a black dress walking down steps toward a city park", "Platinum"),
