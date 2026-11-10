@@ -133,11 +133,9 @@ GALLERIES = [
         "Gray Beanie", "Red Umbrella", "Leap", "Three on a Wall", "Platform", "The Fisherman", "Into the Light", "Two at Dusk", "Stone Steps", "Splash Pad",
         "Sun Seeker", "On the Edge", "Paddle Out", "Walker on the Shore")),
     ("places", "Places", "Atlanta from above and below, the Gulf Coast, Yellowstone and Vietnam.", G(
-        "Karst Valley", "Skyline Rays", "Lone Cypress", "Grand Prismatic", "City Lights", "Windswept",
-        "Old Faithful", "Pier at Sunset", "Under the Bridge", "Golden Morning", "Morning Glory", "Into the Fog",
-        "Trail to the Beach", "Tower", "Heron on the Dock", "Sea Oats", "The Boathouse", "River Rapids",
-        "Ember Sky", "White Dunes", "Palm Silhouettes", "Meadow Stream", "Pier at Sundown", "Steaming Pool",
-        "Lone Palm", "Marsh", "Quiet Beach", "Last Light", "Rush Hour", "Midnight")),
+        "Karst Valley", "Skyline Rays", "Lone Cypress", "Windswept",
+        "Pier at Sunset", "Under the Bridge", "Golden Morning", "Morning Glory", "Into the Fog",
+        "Trail to the Beach", "Sea Oats", "The Boathouse", "White Dunes", "Palm Silhouettes", "Pier at Sundown", "Marsh", "Quiet Beach", "Last Light", "Rush Hour")),
     ("things", "Things", "Signs, neon, cars and the buildings around them.", G(
         "Majestic Diner", "The Fox", "Ferris Wheel", "Drink Coca-Cola", "The Varsity", "The Dome",
         "Clermont", "Old Cadillac", "Birdcage", "Motor Hotel, Black and White", "Atrium", "Ice Cold",
