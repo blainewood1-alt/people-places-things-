@@ -46,9 +46,9 @@ h2{font-size:1.8rem;margin:0 0 8px}
 .gallery-card h3{margin:12px 0 0;font-size:1.25rem}
 .gallery-card p{margin:0;font-family:var(--sans);font-size:.85rem;color:var(--muted)}
 .gallery-card:hover h3{text-decoration:underline;text-underline-offset:5px}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.split>div{background:var(--panel);padding:36px}
-.split p{margin:0 0 20px}
+.split{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.split>div{background:var(--panel);padding:32px;display:flex;flex-direction:column;align-items:flex-start}
+.split p{margin:0 0 20px;flex:1}
 
 /* portfolio */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 48px}
@@ -109,6 +109,7 @@ h2{font-size:1.8rem;margin:0 0 8px}
 .lb-next{right:8px;top:50%;transform:translateY(-50%)}
 
 @media (max-width:900px){
+  .split{grid-template-columns:1fr}
   .gallery-cards{grid-template-columns:repeat(2,1fr)}
   .set-strip{grid-template-columns:repeat(3,1fr)}
   .set-info{grid-template-columns:1fr}

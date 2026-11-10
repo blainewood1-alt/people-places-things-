@@ -246,6 +246,11 @@ def build_home():
   </section>
   <section class="split">
     <div>
+      <h2>Portfolio</h2>
+      <p>Street scenes, signs and neon, places, silhouettes, faces and film, gathered into six galleries.</p>
+      <a class="btn" href="portfolio.html">See the portfolio</a>
+    </div>
+    <div>
       <h2>Prints</h2>
       <p>Most of these photos are available as archival prints from 8 &times; 12 up to 24 &times; 36 inches, on their own or as a set of related images.</p>
       <a class="btn" href="prints.html">Browse prints and sets</a>
