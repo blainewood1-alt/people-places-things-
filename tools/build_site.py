@@ -130,8 +130,8 @@ GALLERIES = [
     ("people", "People", "Strangers, neighbors and lone figures in the light.", G(
         "Long Shadow", "The Cowboy", "The Barber", "Looking Up", "Lone Angler",
         "Bench in the Light", "Morning Walk", "In the Window", "Window Shopping",
-        "Gray Beanie", "Red Umbrella", "Leap", "Three on a Wall", "Platform", "The Fisherman", "Into the Light", "Two at Dusk", "Stone Steps", "Splash Pad",
-        "Sun Seeker", "On the Edge", "Paddle Out", "Walker on the Shore")),
+        "Gray Beanie", "Red Umbrella", "Platform", "The Fisherman", "Into the Light", "Two at Dusk", "Stone Steps", "Splash Pad",
+        "Sun Seeker", "On the Edge", "Paddle Out")),
     ("places", "Places", "Atlanta from above and below, the Gulf Coast, Yellowstone and Vietnam.", G(
         "Karst Valley", "Skyline Rays", "Lone Cypress", "Windswept",
         "Pier at Sunset", "Under the Bridge", "Golden Morning", "Morning Glory", "Into the Fog",
