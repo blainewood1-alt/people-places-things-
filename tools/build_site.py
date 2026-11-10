@@ -39,7 +39,7 @@ def F(slug, alt, title):
 
 
 # ---------- Portfolio galleries ----------
-GALLERIES = [
+_OLD_GALLERIES = [
     ("street", "Street", "Everyday Atlanta: light, shadow and people going about their day.", [
         P("Long Shadow"), F("look-left", "A woman in a pink hat walking past a black car and a painted 'Look Left' sign", "Look Left"),
         F("sun-shield", "A man shading his head with a sheet of paper as he crosses a sunny street", "Sun Shield"),
@@ -117,6 +117,38 @@ GALLERIES = [
     ]),
 ]
 
+
+# Every photo above, looked up by title, so the galleries below can just list titles.
+PHOTO = {ph[2]: ph for _, _, _, photos in _OLD_GALLERIES for ph in photos}
+
+
+def G(*titles):
+    return [PHOTO[t] for t in titles]
+
+
+GALLERIES = [
+    ("people", "People", "Strangers, neighbors and lone figures in the light.", G(
+        "Long Shadow", "The Cowboy", "Look Left", "The Barber", "Sun Shield", "Looking Up", "Lone Angler",
+        "Bench in the Light", "Waiting at MARTA", "Morning Walk", "In the Window", "Window Shopping",
+        "Gray Beanie", "Red Umbrella", "Leap", "Three on a Wall", "Welcome to Inman Park", "Surf Casters",
+        "Platform", "The Fisherman", "Into the Light", "Two at Dusk", "Stone Steps", "Splash Pad",
+        "Walk with the Dog", "Sun Seeker", "On the Edge", "Paddle Out", "Angler, Blue Hour",
+        "Walker on the Shore", "Red Wall, Blue Sky")),
+    ("places", "Places", "Atlanta from above and below, the Gulf Coast, Yellowstone and Vietnam.", G(
+        "Karst Valley", "Skyline Rays", "Lone Cypress", "Grand Prismatic", "City Lights", "Windswept",
+        "Old Faithful", "Pier at Sunset", "Under the Bridge", "Golden Morning", "Morning Glory", "Into the Fog",
+        "Trail to the Beach", "Tower", "Heron on the Dock", "Sea Oats", "The Boathouse", "River Rapids",
+        "Ember Sky", "White Dunes", "Palm Silhouettes", "Meadow Stream", "Pier at Sundown", "Steaming Pool",
+        "Lone Palm", "Marsh", "Quiet Beach", "Last Light", "Rush Hour", "Midnight")),
+    ("things", "Things", "Signs, neon, cars and the buildings around them.", G(
+        "Majestic Diner", "The Fox", "Ferris Wheel", "Drink Coca-Cola", "The Varsity", "The Dome",
+        "Clermont", "Old Cadillac", "Birdcage", "Motor Hotel, Black and White", "Atrium", "Ice Cold",
+        "Ponce at Night", "Beach Umbrella", "Manuel's Tavern", "Ribbed Corridor", "Gas Station", "Boxcar",
+        "Ponce City Market", "Red Bar", "Hood Ornament", "Container Wall", "Miller's Rexall", "Arches",
+        "Motor Hotel, Afternoon", "The Mural", "Clermont Nights", "Swing Ride", "Georgia Girl",
+        "Passing Train", "Mural Reflection")),
+]
+
 # ---------- Print sets ----------
 SETS = [
     ("Coast at Dusk", "Lone figures against the last light on the Gulf, deep blue fading to orange.", [
@@ -143,23 +175,6 @@ SETS = [
     ("Gulf Coast on Film", "Soft pastel sand and sky from one roll of film. Prints up to 20 × 30 in.", [
         F("white-dunes", "", "White Dunes"), F("sea-oats", "", "Sea Oats"), F("film-palm", "", "Lone Palm"),
         F("marsh", "", "Marsh"), F("walker-on-the-shore", "", "Walker on the Shore")]),
-]
-
-# Cover photo for each gallery on the home page
-COVERS = {"street": "Under the Bridge", "signs": "Clermont", "places": "Grand Prismatic",
-          "silhouettes": "Leap", "faces": "The Barber", "film": "White Dunes"}
-
-# Home page picks: (gallery id, photo)
-FEATURED = [
-    ("silhouettes", F("lone-cypress", "A wind-shaped cypress tree silhouetted against a white sky", "Lone Cypress")),
-    ("street", P("Long Shadow")),
-    ("signs", P("Majestic Diner")),
-    ("places", F("karst-valley", "A green river valley between karst mountains in Vietnam", "Karst Valley")),
-    ("faces", P("The Cowboy")),
-    ("places", F("skyline-rays", "Rays of light over the Midtown Atlanta skyline at sunrise", "Skyline Rays")),
-    ("street", F("red-umbrella", "A red umbrella on an escalator seen from above", "Red Umbrella")),
-    ("silhouettes", P("Lone Angler")),
-    ("film", F("sea-oats", "Sea oats on a dune against a blue sky", "Sea Oats")),
 ]
 
 # ---------- helpers ----------
@@ -227,12 +242,6 @@ def size_select(label):
 
 # ---------- Home ----------
 def build_home():
-    feat = "\n".join('    <a class="tile" href="portfolio.html#%s">%s<span>%s</span></a>' % (g, img(p), e(p[2]))
-                     for g, p in FEATURED)
-    cards = "\n".join(
-        '    <a class="gallery-card" href="portfolio.html#%s">%s<h3>%s</h3><p>%d photos</p></a>'
-        % (gid, img(next(p for p in photos if p[2] == COVERS[gid])), e(name), len(photos))
-        for gid, name, _, photos in GALLERIES)
     body = """<section class="hero" style="background-image:url('%simages/hero.jpg')">
   <div>
     <h1>Blaine Wood Photo</h1>
@@ -247,7 +256,7 @@ def build_home():
   <section class="split">
     <div>
       <h2>Portfolio</h2>
-      <p>Street scenes, signs and neon, places, silhouettes, faces and film, gathered into six galleries.</p>
+      <p>Three galleries of my favorite photos: people, places and things.</p>
       <a class="btn" href="portfolio.html">See the portfolio</a>
     </div>
     <div>
