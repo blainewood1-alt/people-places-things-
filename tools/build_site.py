@@ -187,7 +187,7 @@ GALLERIES = [
         F("green-water", "Emerald green surf rolling toward a hazy line of beach hotels", "Green Water"),
         F("low-tide", "A lone figure on a bright sandbar beneath a dark bridge at low tide", "Low Tide")]),
     ("things", "Things", "Signs, neon, cars and the buildings around them.", G(
-        "The Fox", "The Varsity", "Clermont", "Old Cadillac", "Motor Hotel, Black and White", "Atrium", "Ponce at Night", "Ribbed Corridor", "Gas Station", "Ponce City Market", "Hood Ornament", "Miller's Rexall", "Motor Hotel, Afternoon", "Clermont Nights", "Swing Ride", "Georgia Girl",
+        "The Fox", "The Varsity", "Old Cadillac", "Motor Hotel, Black and White", "Atrium", "Ponce at Night", "Ribbed Corridor", "Ponce City Market", "Hood Ornament", "Miller's Rexall", "Motor Hotel, Afternoon", "Clermont Nights", "Swing Ride", "Georgia Girl",
         "Passing Train", "Mural Reflection") + [
         F("red-car", "A red sports car parked alone at the end of an empty, weathered concrete garage", "Red Car")]),
 ]
