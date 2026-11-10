@@ -165,7 +165,8 @@ GALLERIES = [
         F("afternoon-nap", "A person in a patterned tracksuit napping on a red sofa with a towel over their head", "Afternoon Nap"),
         F("in-the-woods", "A man in a fur hat and shearling coat standing in bare winter woods", "In the Woods"),
         F("blue-eyes", "A close-up of pale blue eyes, half the face in shadow", "Blue Eyes"),
-        F("unspoken", "A blonde woman in a black cap and oval sunglasses in hard evening light", "Unspoken")],
+        F("unspoken", "A blonde woman in a black cap and oval sunglasses in hard evening light", "Unspoken"),
+        F("half-light", "A man in a dark suit, his face cut in half by a slash of hard light", "Half Light")],
         # Sequence: dawn to night, alternating black-and-white and color.
         "Lone Angler", "The Fisherman", "River Crossing", "Morning Walk", "Peace Dove",
         "Over the Shoulder", "Platform", "Long Shadow", "Red Bike", "Into the Light",
@@ -174,7 +175,7 @@ GALLERIES = [
         "Bench in the Light", "Waiting for a Set", "Paddle Out", "Sun Seeker", "Unspoken",
         "The Dive", "Splash Pad", "The Crowd", "Stone Steps", "Champions",
         "On the Edge", "Platinum", "Two at Dusk", "Gray Beanie", "Birdcage",
-        "Night Parade", "Curlers", "In the Window", "After Hours", "Weathered",
+        "Night Parade", "Curlers", "In the Window", "After Hours", "Half Light", "Weathered",
         "Blue Eyes", "On the Tracks", "The Doorway", "In the Woods", "Afternoon Nap")),
     ("places", "Places", "Atlanta from above and below, the Gulf Coast, Yellowstone and Vietnam.", G(
         "Karst Valley", "Skyline Rays", "Lone Cypress", "Windswept",
