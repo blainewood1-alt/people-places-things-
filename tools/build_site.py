@@ -182,7 +182,9 @@ GALLERIES = [
         "Pier at Sunset", "Under the Bridge", "Golden Morning", "Morning Glory", "Into the Fog",
         "Trail to the Beach", "Sea Oats", "The Boathouse", "Palm Silhouettes", "Pier at Sundown", "Marsh", "Quiet Beach", "Last Light", "Rush Hour") + [
         F("manarola", "Pastel houses stacked on a cliff above the harbor in Manarola, Italy", "Manarola"),
-        F("rolling-hills", "Green rolling hills and a line of trees under a pink and teal dusk sky", "Rolling Hills")]),
+        F("rolling-hills", "Green rolling hills and a line of trees under a pink and teal dusk sky", "Rolling Hills"),
+        F("blue-and-white", "Rows of blue and white striped umbrellas and blue loungers on a beach in Italy", "Blue and White"),
+        F("green-water", "Emerald green surf rolling toward a hazy line of beach hotels", "Green Water")]),
     ("things", "Things", "Signs, neon, cars and the buildings around them.", G(
         "The Fox", "The Varsity", "Clermont", "Old Cadillac", "Motor Hotel, Black and White", "Atrium", "Ponce at Night", "Ribbed Corridor", "Gas Station", "Ponce City Market", "Hood Ornament", "Miller's Rexall", "Motor Hotel, Afternoon", "Clermont Nights", "Swing Ride", "Georgia Girl",
         "Passing Train", "Mural Reflection") + [
