@@ -126,8 +126,16 @@ def G(*titles):
     return [PHOTO[t] for t in titles]
 
 
+def ORDER(photos, *titles):
+    """Return photos in the given title order (every photo must be listed once)."""
+    by = {ph[2]: ph for ph in photos}
+    assert sorted(by) == sorted(titles), set(by) ^ set(titles)
+    return [by[t] for t in titles]
+
+
 GALLERIES = [
-    ("people", "People", "Strangers, neighbors and lone figures in the light.", G(
+    ("people", "People", "Strangers, neighbors and lone figures in the light.", ORDER(
+        G(
         "Long Shadow", "The Cowboy", "The Barber", "Looking Up", "Lone Angler",
         "Bench in the Light", "Morning Walk", "In the Window", "Window Shopping",
         "Gray Beanie", "Platform", "The Fisherman", "Into the Light", "Two at Dusk", "Stone Steps", "Splash Pad",
@@ -157,7 +165,17 @@ GALLERIES = [
         F("afternoon-nap", "A person in a patterned tracksuit napping on a red sofa with a towel over their head", "Afternoon Nap"),
         F("in-the-woods", "A man in a fur hat and shearling coat standing in bare winter woods", "In the Woods"),
         F("blue-eyes", "A close-up of pale blue eyes, half the face in shadow", "Blue Eyes"),
-        F("unspoken", "A blonde woman in a black cap and oval sunglasses in hard evening light", "Unspoken")]),
+        F("unspoken", "A blonde woman in a black cap and oval sunglasses in hard evening light", "Unspoken")],
+        # Sequence: dawn to night, alternating black-and-white and color.
+        "Lone Angler", "The Fisherman", "River Crossing", "Morning Walk", "Peace Dove",
+        "Over the Shoulder", "Platform", "Long Shadow", "Red Bike", "Into the Light",
+        "Red Sweater", "Window Shopping", "The Barber", "Market Day", "On Horseback",
+        "Rodeo Clown", "The Cowboy", "Three in Black", "Street Chess", "Looking Up",
+        "Bench in the Light", "Waiting for a Set", "Paddle Out", "Sun Seeker", "Unspoken",
+        "The Dive", "Splash Pad", "The Crowd", "Stone Steps", "Champions",
+        "On the Edge", "Platinum", "Two at Dusk", "Gray Beanie", "Birdcage",
+        "Night Parade", "Curlers", "In the Window", "After Hours", "Weathered",
+        "Blue Eyes", "On the Tracks", "The Doorway", "In the Woods", "Afternoon Nap")),
     ("places", "Places", "Atlanta from above and below, the Gulf Coast, Yellowstone and Vietnam.", G(
         "Karst Valley", "Skyline Rays", "Lone Cypress", "Windswept",
         "Pier at Sunset", "Under the Bridge", "Golden Morning", "Morning Glory", "Into the Fog",
@@ -200,11 +218,23 @@ SETS = [
 e = html.escape
 
 
+_SIZES = {}
+
+
+def size_attrs(src):
+    """width/height attributes, so the browser (and the gallery script) know each photo's shape."""
+    if src not in _SIZES:
+        from PIL import Image
+        with Image.open(os.path.join(ROOT, "images", src)) as im:
+            _SIZES[src] = im.size
+    return ' width="%d" height="%d"' % _SIZES[src]
+
+
 def img(photo, cls="", lazy=True, zoom=False):
     src, alt, title = photo
     c = (cls + (" zoom" if zoom else "")).strip()
-    return '<img src="%simages/%s" alt="%s"%s%s%s>' % (
-        UP, src, e(alt or title), ' class="%s"' % c if c else "", ' loading="lazy"' if lazy else "",
+    return '<img src="%simages/%s" alt="%s"%s%s%s%s>' % (
+        UP, src, e(alt or title), size_attrs(src), ' class="%s"' % c if c else "", ' loading="lazy"' if lazy else "",
         ' data-title="%s"' % e(title) if zoom else "")
 
 

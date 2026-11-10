@@ -3,7 +3,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--bg);color:var(--text);line-height:1.6}
 a{color:inherit}
-img{max-width:100%}
+img{max-width:100%;height:auto}
 
 /* header */
 .site-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 24px;padding:20px 32px;border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
@@ -59,6 +59,9 @@ h2{font-size:1.8rem;margin:0 0 8px}
 .masonry{columns:3 280px;column-gap:16px}
 .masonry figure{margin:0 0 16px;break-inside:avoid}
 .masonry img{width:100%;height:auto;display:block;background:#ddd}
+/* site.js lays photos out in reading order (left to right) across these columns */
+.masonry.ordered{columns:auto;display:flex;gap:16px;align-items:flex-start}
+.masonry.ordered .col{flex:1;min-width:0}
 .zoom{cursor:zoom-in}
 .cta{text-align:center;font-family:var(--sans);color:var(--muted)}
 
@@ -128,5 +131,6 @@ h2{font-size:1.8rem;margin:0 0 8px}
   .split>div,.contact-cols>div{padding:24px}
   .masonry{columns:2;column-gap:8px}
   .masonry figure{margin-bottom:8px}
+  .masonry.ordered{gap:8px}
   .lb-prev,.lb-next{top:auto;bottom:8px;transform:none}
 }

@@ -24,6 +24,10 @@
     img.addEventListener('click', function () {
       var scope = img.closest('[data-gallery]') || document;
       group = Array.prototype.slice.call(scope.querySelectorAll('img.zoom'));
+      // Keep the gallery's sequence even when the photos sit in columns.
+      if (group.length && group[0].hasAttribute('data-i')) {
+        group.sort(function (a, b) { return a.getAttribute('data-i') - b.getAttribute('data-i'); });
+      }
       show(group.indexOf(img));
       box.classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -67,4 +71,44 @@
   var hash = location.hash.slice(1);
   showView(ids.indexOf(hash) > -1 ? hash : start.getAttribute('data-view'));
   if (ids.indexOf(hash) > -1) window.scrollTo(0, 0);
+})();
+
+// Gallery layout: place photos in sequence, each into the shortest column,
+// so the order reads left to right instead of down one column at a time.
+(function () {
+  var walls = Array.prototype.slice.call(document.querySelectorAll('.masonry'));
+  if (!walls.length) return;
+  walls.forEach(function (wall) {
+    wall._figs = Array.prototype.slice.call(wall.children);
+    wall._figs.forEach(function (f, i) { var im = f.querySelector('img'); if (im) im.setAttribute('data-i', i); });
+  });
+  function count(wall) {
+    var w = wall.clientWidth || wall.parentNode.clientWidth || window.innerWidth;
+    if (window.innerWidth <= 700) return 2;
+    return Math.max(1, Math.min(3, Math.floor((w + 16) / (280 + 16))));
+  }
+  function layout(wall) {
+    var n = count(wall);
+    if (wall._n === n) return;
+    wall._n = n;
+    var cols = [], heights = [];
+    for (var c = 0; c < n; c++) { var d = document.createElement('div'); d.className = 'col'; cols.push(d); heights.push(0); }
+    wall._figs.forEach(function (f) {
+      var im = f.querySelector('img');
+      var ratio = im && im.getAttribute('width') ? im.getAttribute('height') / im.getAttribute('width') : 1;
+      var k = heights.indexOf(Math.min.apply(null, heights));
+      cols[k].appendChild(f);
+      heights[k] += ratio;
+    });
+    wall.innerHTML = '';
+    cols.forEach(function (c) { wall.appendChild(c); });
+    wall.classList.add('ordered');
+  }
+  function all() { walls.forEach(function (w) { if (w.offsetParent !== null || w._n === undefined) layout(w); }); }
+  all();
+  // Hidden tabs report no width, so lay them out again when shown or resized.
+  window.addEventListener('resize', function () { walls.forEach(function (w) { w._n = null; }); all(); });
+  document.querySelectorAll('.view-tabs a').forEach(function (t) {
+    t.addEventListener('click', function () { setTimeout(function () { walls.forEach(function (w) { if (w.offsetParent !== null) { w._n = null; layout(w); } }); }, 0); });
+  });
 })();
