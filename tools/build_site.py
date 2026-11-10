@@ -177,10 +177,12 @@ GALLERIES = [
         "On the Edge", "Platinum", "Two at Dusk", "Gray Beanie", "Birdcage",
         "Night Parade", "Curlers", "In the Window", "After Hours", "Half Light", "Weathered",
         "Blue Eyes", "On the Tracks", "The Doorway", "In the Woods", "Afternoon Nap")),
-    ("places", "Places", "Atlanta from above and below, the Gulf Coast, Yellowstone and Vietnam.", G(
+    ("places", "Places", "Atlanta from above and below, the Gulf Coast, Yellowstone, Vietnam and Italy.", G(
         "Karst Valley", "Skyline Rays", "Lone Cypress", "Windswept",
         "Pier at Sunset", "Under the Bridge", "Golden Morning", "Morning Glory", "Into the Fog",
-        "Trail to the Beach", "Sea Oats", "The Boathouse", "Palm Silhouettes", "Pier at Sundown", "Marsh", "Quiet Beach", "Last Light", "Rush Hour")),
+        "Trail to the Beach", "Sea Oats", "The Boathouse", "Palm Silhouettes", "Pier at Sundown", "Marsh", "Quiet Beach", "Last Light", "Rush Hour") + [
+        F("manarola", "Pastel houses stacked on a cliff above the harbor in Manarola, Italy", "Manarola"),
+        F("rolling-hills", "Green rolling hills and a line of trees under a pink and teal dusk sky", "Rolling Hills")]),
     ("things", "Things", "Signs, neon, cars and the buildings around them.", G(
         "The Fox", "The Varsity", "Clermont", "Old Cadillac", "Motor Hotel, Black and White", "Atrium", "Ponce at Night", "Ribbed Corridor", "Gas Station", "Ponce City Market", "Hood Ornament", "Miller's Rexall", "Motor Hotel, Afternoon", "Clermont Nights", "Swing Ride", "Georgia Girl",
         "Passing Train", "Mural Reflection") + [
