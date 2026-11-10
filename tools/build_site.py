@@ -135,7 +135,7 @@ GALLERIES = [
     ("places", "Places", "Atlanta from above and below, the Gulf Coast, Yellowstone and Vietnam.", G(
         "Karst Valley", "Skyline Rays", "Lone Cypress", "Windswept",
         "Pier at Sunset", "Under the Bridge", "Golden Morning", "Morning Glory", "Into the Fog",
-        "Trail to the Beach", "Sea Oats", "The Boathouse", "White Dunes", "Palm Silhouettes", "Pier at Sundown", "Marsh", "Quiet Beach", "Last Light", "Rush Hour")),
+        "Trail to the Beach", "Sea Oats", "The Boathouse", "Palm Silhouettes", "Pier at Sundown", "Marsh", "Quiet Beach", "Last Light", "Rush Hour")),
     ("things", "Things", "Signs, neon, cars and the buildings around them.", G(
         "Majestic Diner", "The Fox", "Ferris Wheel", "Drink Coca-Cola", "The Varsity", "The Dome",
         "Clermont", "Old Cadillac", "Birdcage", "Motor Hotel, Black and White", "Atrium", "Ice Cold",
