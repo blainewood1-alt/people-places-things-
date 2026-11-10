@@ -244,18 +244,6 @@ def build_home():
   <section class="intro">
     <p>I'm Blaine, an Atlanta photographer who shoots for the love of it. Most days that means street scenes, old signs, and whatever the light is doing. This is where I share my favorites.</p>
   </section>
-  <section>
-    <div class="section-head"><h2>Selected work</h2><a href="portfolio.html">Full portfolio &rarr;</a></div>
-    <div class="tiles">
-%s
-    </div>
-  </section>
-  <section>
-    <div class="section-head"><h2>Galleries</h2></div>
-    <div class="gallery-cards">
-%s
-    </div>
-  </section>
   <section class="split">
     <div>
       <h2>Prints</h2>
@@ -268,7 +256,7 @@ def build_home():
       <a class="btn btn-outline" href="contact.html">Get in touch</a>
     </div>
   </section>
-</main>""" % (UP, feat, cards)
+</main>""" % UP
     page("index.html", "Blaine Wood Photo | Atlanta photography", body,
          "Street, places and portrait photography by Blaine Wood in Atlanta, GA, with fine art prints for sale.")
 
