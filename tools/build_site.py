@@ -242,7 +242,7 @@ def build_home():
 </section>
 <main>
   <section class="intro">
-    <p>I'm Blaine, an Atlanta photographer who shoots for the love of it. Most days that means street scenes, people, and whatever the light and shadows are doing. This is where I share my favorites.</p>
+    <p>I'm Blaine Wood, an Atlanta photographer who shoots for the love of it. Most days that means street scenes, people, landscapes and whatever the light and shadows are doing. This is where I share my favorites and offer the opportunity to purchase my prints.</p>
   </section>
   <section class="split">
     <div>
