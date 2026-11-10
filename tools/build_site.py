@@ -177,7 +177,7 @@ GALLERIES = [
         "On the Edge", "Platinum", "Two at Dusk", "Gray Beanie", "Birdcage",
         "Night Parade", "Curlers", "In the Window", "After Hours", "Half Light", "Weathered",
         "Blue Eyes", "On the Tracks", "The Doorway", "In the Woods", "Afternoon Nap")),
-    ("places", "Places", "Atlanta from above and below, the Gulf Coast, Yellowstone, Vietnam and Italy.", G(
+    ("places", "Places", "From Atlanta and beyond...", G(
         "Karst Valley", "Skyline Rays", "Lone Cypress", "Windswept",
         "Pier at Sunset", "Under the Bridge", "Golden Morning", "Morning Glory", "Into the Fog",
         "Trail to the Beach", "Sea Oats", "The Boathouse", "Palm Silhouettes", "Pier at Sundown", "Marsh", "Quiet Beach", "Last Light", "Rush Hour") + [
