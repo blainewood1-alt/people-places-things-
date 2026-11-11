@@ -196,9 +196,8 @@ GALLERIES = [
 SETS = [
     ("Quiet Coast", "Lone figures and a single cypress set against wide, bright, empty space.", [
         F("on-the-edge", "", "On the Edge"), F("lone-cypress", "", "Lone Cypress"), F("low-tide", "", "Low Tide")]),
-    ("Ghost Signs", "Hand-painted brick-wall ads in red, cream and black. The most Atlanta set of all.", [
-        F("drink-coca-cola", "", "Drink Coca-Cola"), F("refreshing", "", "Refreshing"), F("delicious", "", "Delicious"),
-        F("ice-cold", "", "Ice Cold"), F("manuels-tavern", "", "Manuel's Tavern"), F("millers-rexall", "", "Miller's Rexall")]),
+    ("In Motion", "City crowds moving between deep shadow and hard light.", [
+        F("going-up", "People riding a long escalator out of the dark", "Going Up"), P("Splash Pad"), P("Stone Steps")]),
     ("Silhouettes", "Dark shapes against bright, empty skies, with plenty of room to breathe.", [
         F("lone-cypress", "", "Lone Cypress"), F("windswept", "", "Windswept"), F("in-the-window", "", "In the Window"),
         F("leap", "", "Leap"), F("into-the-fog", "", "Into the Fog")]),
