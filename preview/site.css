@@ -116,6 +116,7 @@ h2{font-size:1.8rem;margin:0 0 8px}
   .split{grid-template-columns:1fr}
   .gallery-cards{grid-template-columns:repeat(2,1fr)}
   .set-strip{grid-template-columns:repeat(3,1fr)}
+  .set-strip.two{grid-template-columns:repeat(2,1fr)}
   .set-info{grid-template-columns:1fr}
   .set-info .buy{grid-column:auto;grid-row:auto;margin-top:8px}
 }

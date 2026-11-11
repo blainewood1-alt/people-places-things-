@@ -211,9 +211,11 @@ SETS = [
         F("donuts", "A red neon DONUTS sign glowing over a rack of greeting cards", "Donuts"),
         F("red-tunnel", "An empty walkway under glowing red steel arches at night", "Red Tunnel"),
         F("not-your-ordinary", "A barbershop window lit red inside, gold lettering on the glass", "Not Your Ordinary")]),
-    ("Light and Shadow", "Black-and-white street frames cut by hard light.", [
-        P("Long Shadow"), F("sun-shield", "", "Sun Shield"), F("bench-in-the-light", "", "Bench in the Light"),
-        F("under-the-bridge", "", "Under the Bridge"), F("tower", "", "Tower")]),
+    ("Into the Pines", "A gray December day in the coastal woods, from the palmettos to the shore.", [
+        F("pine-savanna", "Tall pines standing over a marsh of grass under a cloudy sky", "Pine Savanna"),
+        F("palmetto-woods", "Saw palmettos growing under twisted, lichen-covered oaks", "Palmetto Woods"),
+        F("last-berries", "Dark berries hanging from a thin branch against a blurred forest", "Last Berries"),
+        F("bay-shore", "Bare, lichen-covered trees and pines along a quiet sandy shore", "Bay Shore")]),
     ("Yellowstone", "Mineral colors, steam and big sky from July 2021.", [
         F("old-faithful", "", "Old Faithful"), F("grand-prismatic", "", "Grand Prismatic"), F("steaming-pool", "", "Steaming Pool"),
         F("morning-glory", "", "Morning Glory"), F("river-rapids", "", "River Rapids"), F("meadow-stream", "", "Meadow Stream")]),
@@ -378,7 +380,7 @@ def build_prints():
         # Wide sets keep their landscape shape instead of the usual tall crop.
         wide = sum(1 for p in photos if _shape(p[0]) > 1) > n / 2
         sets.append("""    <article class="set" data-gallery>
-      <div class="set-strip" style="--n:%d%s">
+      <div class="set-strip%s" style="--n:%d%s">
 %s
       </div>
       <div class="set-info">
@@ -387,7 +389,7 @@ def build_prints():
         <p class="meta">%s</p>
         <div class="buy">%s %s <a class="btn" href="mailto:%s">Buy set</a></div>
       </div>
-    </article>""" % (n, ";--ar:3/2" if wide else "", thumbs, e(name), e(blurb), e(names), count, size_select("Size for " + name), EMAIL))
+    </article>""" % (" two" if n == 4 else "", 2 if n == 4 else n, ";--ar:3/2" if wide else "", thumbs, e(name), e(blurb), e(names), count, size_select("Size for " + name), EMAIL))
     singles = []
     for f, alt, title in PRINTS:
         singles.append("""    <article class="print">
