@@ -203,9 +203,10 @@ SETS = [
         F("old-board", "A worn orange surfboard hanging under a palm-frond shade", "Old Board"),
         F("trail-to-the-break", "Surfers carrying boards down a dirt trail below tall coastal bluffs", "Trail to the Break"),
         F("beach-cottages", "A row of red beach cottages, a man opening an umbrella and a woman at a dutch door", "Beach Cottages")]),
-    ("Neon Nights", "Saturated color glowing out of the dark.", [
-        F("ferris-wheel", "", "Ferris Wheel"), F("gas-station", "", "Gas Station"), F("birdcage", "", "Birdcage"),
-        F("arches", "", "Arches"), F("red-bar", "", "Red Bar"), F("ponce-at-night", "", "Ponce at Night"), F("clermont", "", "Clermont")]),
+    ("On the Pier", "A gray, windy day on a fishing pier, from the rental rods to the catch.", [
+        F("rod-rack", "Rows of rental fishing rods and reels standing in a rack", "Rod Rack"),
+        F("the-pier", "A long fishing pier reaching into rough surf on a foggy day", "The Pier"),
+        F("fish-on", "Hooded anglers bracing as a rod bends over the rail", "Fish On")]),
     ("Atlanta Skyline, Dawn to Night", "The same city from above as the light changes through the day.", [
         F("golden-morning", "", "Golden Morning"), F("skyline-rays", "", "Sunrise Rays"), F("ember-sky", "", "Ember Sky"),
         F("blue-hour-skyline", "", "Blue Hour"), F("city-lights", "", "City Lights"), F("midnight", "", "Midnight")]),
