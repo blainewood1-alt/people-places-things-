@@ -198,9 +198,10 @@ SETS = [
         F("on-the-edge", "", "On the Edge"), F("lone-cypress", "", "Lone Cypress"), F("low-tide", "", "Low Tide")]),
     ("In Motion", "City crowds moving between deep shadow and hard light.", [
         F("going-up", "People riding a long escalator out of the dark", "Going Up"), P("Splash Pad"), P("Stone Steps")]),
-    ("Silhouettes", "Dark shapes against bright, empty skies, with plenty of room to breathe.", [
-        F("lone-cypress", "", "Lone Cypress"), F("windswept", "", "Windswept"), F("in-the-window", "", "In the Window"),
-        F("leap", "", "Leap"), F("into-the-fog", "", "Into the Fog")]),
+    ("Surf Town", "Warm, faded afternoons on the Southern California coast.", [
+        F("old-board", "A worn orange surfboard hanging under a palm-frond shade", "Old Board"),
+        F("trail-to-the-break", "Surfers carrying boards down a dirt trail below tall coastal bluffs", "Trail to the Break"),
+        F("beach-cottages", "A row of red beach cottages, a man opening an umbrella and a woman at a dutch door", "Beach Cottages")]),
     ("Neon Nights", "Saturated color glowing out of the dark.", [
         F("ferris-wheel", "", "Ferris Wheel"), F("gas-station", "", "Gas Station"), F("birdcage", "", "Birdcage"),
         F("arches", "", "Arches"), F("red-bar", "", "Red Bar"), F("ponce-at-night", "", "Ponce at Night"), F("clermont", "", "Clermont")]),
