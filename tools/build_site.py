@@ -207,9 +207,10 @@ SETS = [
         F("rod-rack", "Rows of rental fishing rods and reels standing in a rack", "Rod Rack"),
         F("the-pier", "A long fishing pier reaching into rough surf on a foggy day", "The Pier"),
         F("fish-on", "Hooded anglers bracing as a rod bends over the rail", "Fish On")]),
-    ("Atlanta Skyline, Dawn to Night", "The same city from above as the light changes through the day.", [
-        F("golden-morning", "", "Golden Morning"), F("skyline-rays", "", "Sunrise Rays"), F("ember-sky", "", "Ember Sky"),
-        F("blue-hour-skyline", "", "Blue Hour"), F("city-lights", "", "City Lights"), F("midnight", "", "Midnight")]),
+    ("Red Light", "One late-summer night in Atlanta, washed in red.", [
+        F("donuts", "A red neon DONUTS sign glowing over a rack of greeting cards", "Donuts"),
+        F("red-tunnel", "An empty walkway under glowing red steel arches at night", "Red Tunnel"),
+        F("not-your-ordinary", "A barbershop window lit red inside, gold lettering on the glass", "Not Your Ordinary")]),
     ("Light and Shadow", "Black-and-white street frames cut by hard light.", [
         P("Long Shadow"), F("sun-shield", "", "Sun Shield"), F("bench-in-the-light", "", "Bench in the Light"),
         F("under-the-bridge", "", "Under the Bridge"), F("tower", "", "Tower")]),
