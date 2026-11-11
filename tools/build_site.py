@@ -216,9 +216,10 @@ SETS = [
         F("palmetto-woods", "Saw palmettos growing under twisted, lichen-covered oaks", "Palmetto Woods"),
         F("last-berries", "Dark berries hanging from a thin branch against a blurred forest", "Last Berries"),
         F("bay-shore", "Bare, lichen-covered trees and pines along a quiet sandy shore", "Bay Shore")]),
-    ("Yellowstone", "Mineral colors, steam and big sky from July 2021.", [
-        F("old-faithful", "", "Old Faithful"), F("grand-prismatic", "", "Grand Prismatic"), F("steaming-pool", "", "Steaming Pool"),
-        F("morning-glory", "", "Morning Glory"), F("river-rapids", "", "River Rapids"), F("meadow-stream", "", "Meadow Stream")]),
+    ("Vietnam", "Markets, mountains and rice fields in northern Vietnam.", [
+        F("green-onions", "A vendor bagging chopped green onions in front of a painted yellow wall", "Green Onions"),
+        F("karst-valley", "Boats on a brown river winding between green limestone peaks", "Karst Valley"),
+        F("rice-field", "A farmer in a conical hat bent over a bright green rice field below limestone hills", "Rice Field")]),
     ("Gulf Coast on Film", "Soft pastel sand and sky from one roll of film. Prints up to 20 × 30 in.", [
         F("white-dunes", "", "White Dunes"), F("sea-oats", "", "Sea Oats"), F("film-palm", "", "Lone Palm"),
         F("marsh", "", "Marsh"), F("walker-on-the-shore", "", "Walker on the Shore")]),
