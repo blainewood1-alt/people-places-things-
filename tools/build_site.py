@@ -189,7 +189,8 @@ GALLERIES = [
     ("things", "Things", "Signs, neon, cars and the buildings around them.", G(
         "The Fox", "The Varsity", "Old Cadillac", "Motor Hotel, Black and White", "Atrium", "Ponce at Night", "Ribbed Corridor", "Ponce City Market", "Hood Ornament", "Miller's Rexall", "Motor Hotel, Afternoon", "Clermont Nights", "Swing Ride", "Georgia Girl",
         "Passing Train", "Mural Reflection") + [
-        F("red-car", "A red sports car parked alone at the end of an empty, weathered concrete garage", "Red Car")]),
+        F("red-car", "A red sports car parked alone at the end of an empty, weathered concrete garage", "Red Car"),
+        F("in-bottles", "A red vintage Coca-Cola machine beside a sticker-covered door in a dim bar", "In Bottles")]),
 ]
 
 # ---------- Print sets ----------
