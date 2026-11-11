@@ -194,9 +194,8 @@ GALLERIES = [
 
 # ---------- Print sets ----------
 SETS = [
-    ("Coast at Dusk", "Lone figures against the last light on the Gulf, deep blue fading to orange.", [
-        P("Lone Angler"), F("angler-blue-hour", "", "Angler, Blue Hour"), F("surf-casters", "", "Surf Casters"),
-        F("two-at-dusk", "", "Two at Dusk"), F("pier-at-sundown", "", "Pier at Sundown"), F("walk-with-the-dog", "", "Walk with the Dog")]),
+    ("Quiet Coast", "Lone figures and a single cypress set against wide, bright, empty space.", [
+        F("on-the-edge", "", "On the Edge"), F("lone-cypress", "", "Lone Cypress"), F("low-tide", "", "Low Tide")]),
     ("Ghost Signs", "Hand-painted brick-wall ads in red, cream and black. The most Atlanta set of all.", [
         F("drink-coca-cola", "", "Drink Coca-Cola"), F("refreshing", "", "Refreshing"), F("delicious", "", "Delicious"),
         F("ice-cold", "", "Ice Cold"), F("manuels-tavern", "", "Manuel's Tavern"), F("millers-rexall", "", "Miller's Rexall")]),
@@ -234,6 +233,12 @@ def size_attrs(src):
         with Image.open(os.path.join(ROOT, "images", src)) as im:
             _SIZES[src] = im.size
     return ' width="%d" height="%d"' % _SIZES[src]
+
+
+def _shape(src):
+    size_attrs(src)
+    w, h = _SIZES[src]
+    return w / h
 
 
 def img(photo, cls="", lazy=True, zoom=False):
@@ -365,9 +370,12 @@ def build_prints():
         n = len(photos)
         thumbs = "\n".join("        %s" % img(p, zoom=True) for p in photos)
         names = ", ".join(p[2] for p in photos)
-        count = '<select aria-label="How many prints for %s"><option>All %d prints</option><option>Any 3 (tell me which)</option></select>' % (e(name), n)
+        count = '<select aria-label="How many prints for %s"><option>All %d prints</option>%s</select>' % (
+            e(name), n, "<option>Any 3 (tell me which)</option>" if n > 3 else "")
+        # Wide sets keep their landscape shape instead of the usual tall crop.
+        wide = sum(1 for p in photos if _shape(p[0]) > 1) > n / 2
         sets.append("""    <article class="set" data-gallery>
-      <div class="set-strip" style="--n:%d">
+      <div class="set-strip" style="--n:%d%s">
 %s
       </div>
       <div class="set-info">
@@ -376,7 +384,7 @@ def build_prints():
         <p class="meta">%s</p>
         <div class="buy">%s %s <a class="btn" href="mailto:%s">Buy set</a></div>
       </div>
-    </article>""" % (n, thumbs, e(name), e(blurb), e(names), count, size_select("Size for " + name), EMAIL))
+    </article>""" % (n, ";--ar:3/2" if wide else "", thumbs, e(name), e(blurb), e(names), count, size_select("Size for " + name), EMAIL))
     singles = []
     for f, alt, title in PRINTS:
         singles.append("""    <article class="print">

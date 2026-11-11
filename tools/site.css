@@ -70,7 +70,7 @@ h2{font-size:1.8rem;margin:0 0 8px}
 #sets,#singles{scroll-margin-top:110px}
 .set{display:flex;flex-direction:column-reverse;gap:18px;padding:32px 0;border-top:1px solid var(--line)}
 .set-strip{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:8px}
-.set-strip img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#ddd}
+.set-strip img{width:100%;aspect-ratio:var(--ar,3/4);object-fit:cover;display:block;background:#ddd}
 .set-info{display:grid;grid-template-columns:1fr auto;gap:4px 32px;align-items:end}
 .set-info .buy{grid-column:2;grid-row:1/4;margin:0}
 .set-info h3{font-size:1.5rem;margin:0 0 6px}
