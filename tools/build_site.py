@@ -204,6 +204,17 @@ def C(slug, alt, title):
 
 
 COMMISSIONS = [
+    ("cold-snap", "Cold Snap", "A winter portrait session in the woods, along the trail and out by the lake.",
+     "coldsnap-tall-grass", [
+        C("coldsnap-fallen-log", "A small figure in an orange coat sitting on a fallen, ivy-covered tree in green woods", "Fallen Log"),
+        C("coldsnap-tall-grass", "A man in a fur hat, sunglasses and shearling coat standing in tall winter grass at sunset", "Tall Grass"),
+        C("coldsnap-skyline", "A platinum-haired man in a shearling coat in a park, the city skyline under storm clouds behind him", "Skyline"),
+        C("coldsnap-goggles", "Black and white close-up of a platinum-haired man in round welding goggles", "Goggles"),
+        C("coldsnap-shopping-cart", "A man in goggles and a fur coat lounging in a shopping cart on a dirt path", "Shopping Cart"),
+        C("coldsnap-in-the-trees", "A man in a fur hat and shearling coat standing among bare winter trees", "In the Trees"),
+        C("coldsnap-flat-cap", "Black and white portrait of a man in a flat cap, dark round glasses and a wool scarf", "Flat Cap"),
+        C("coldsnap-pedestal", "A man in a plaid suit and flat cap standing on a stone pedestal in front of a lake", "Pedestal"),
+        C("coldsnap-the-trail", "A small figure in a fur hat standing on a gravel trail between bare trees", "The Trail")]),
     ("underground", "Underground", "An editorial portrait session, from a bare wood floor to an abandoned, graffiti-covered lot.",
      "underground-manhole", [
         C("underground-curled-up", "A person in mesh and green corduroy curled up on a dark wood floor, seen from above", "Curled Up"),
