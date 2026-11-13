@@ -204,6 +204,14 @@ def C(slug, alt, title):
 
 
 COMMISSIONS = [
+    ("best-friend", "Best Friend", "A portrait session with a man and his dog, at home, around the neighborhood and out under the skyline.",
+     "bestfriend-green-sofa", [
+        C("bestfriend-in-his-arms", "A smiling man in a dark blazer holding his gray schnauzer mix by a window", "In His Arms"),
+        C("bestfriend-skyline-walk", "Black and white silhouette of a man walking his dog along a ridge below the city skyline", "Skyline Walk"),
+        C("bestfriend-chevron-wall", "A man carrying a duffel bag walks his dog past a red and white chevron-painted brick wall", "Chevron Wall"),
+        C("bestfriend-sunglasses", "Close-up of a man in tortoiseshell sunglasses and a striped polo looking down in golden light", "Sunglasses"),
+        C("bestfriend-jacket-over-shoulder", "Black and white portrait of a man in a white shirt with a tweed jacket slung over his shoulder", "Jacket Over the Shoulder"),
+        C("bestfriend-green-sofa", "A man sitting on a green velvet sofa with his dog, beneath a gallery wall of paintings", "Green Sofa")]),
     ("war-paint", "War Paint", "A street portrait session along the tracks, from quiet black and white to war paint under red light.",
      "warpaint-red-light", [
         C("warpaint-tracks", "Black and white portrait of a woman with long braids in an embroidered dress beside train tracks", "The Tracks"),
