@@ -50,6 +50,8 @@ h2{font-size:1.8rem;margin:0 0 8px}
 .split{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .split>div{background:var(--panel);padding:32px;display:flex;flex-direction:column;align-items:flex-start}
 .split p{margin:0 0 20px;flex:1}
+.split.two{grid-template-columns:repeat(2,1fr);margin-top:32px}
+.split.two h2{margin-top:0}
 
 /* portfolio */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 48px}
@@ -136,6 +138,7 @@ h2{font-size:1.8rem;margin:0 0 8px}
   .tiles{gap:6px}
   .gallery-cards{gap:16px}
   .split,.contact-cols,.about{grid-template-columns:1fr;gap:20px}
+  .split.two{grid-template-columns:1fr}
   .split>div,.contact-cols>div{padding:24px}
   .masonry{columns:2;column-gap:8px}
   .masonry figure{margin-bottom:8px}
