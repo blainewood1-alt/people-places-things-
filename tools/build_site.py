@@ -565,12 +565,12 @@ def build_about():
         <div>
           <h2>Working together</h2>
           <p>I'm a hobbyist, so I don't advertise sessions. But I do take on the occasional portrait, event or creative project when it's a good fit. If you have something in mind, tell me about it.</p>
-          <a class="btn" href="contact.html">Get in touch</a>
+          <a class="btn" href="mailto:%s?subject=Working%%20together&amp;body=Hi%%20Blaine%%2C%%0A%%0AI%%27d%%20like%%20to%%20talk%%20about%%3A%%20">Get in touch</a>
         </div>
       </section>
     </div>
   </div>
-</main>""" % UP
+</main>""" % (UP, EMAIL)
     page("about.html", "About | Blaine Wood Photo", body,
          "About Blaine Wood, a hobbyist photographer in Atlanta, GA shooting with a Leica M11.")
 
