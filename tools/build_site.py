@@ -445,9 +445,9 @@ def build_commissions():
 
 
 def build_portfolio():
-    chips = '    <a href="#commissions" data-view="commissions">Commissions</a>\n'
-    chips += "\n".join('    <a href="#%s" data-view="%s"%s>%s</a>' % (gid, gid, ' class="active"' if i == 0 else "", e(name))
-                        for i, (gid, name, _, _) in enumerate(GALLERIES))
+    chips = '    <a href="#commissions" data-view="commissions" class="active">Commissions</a>\n'
+    chips += "\n".join('    <a href="#%s" data-view="%s">%s</a>' % (gid, gid, e(name))
+                        for gid, name, _, _ in GALLERIES)
     secs = []
     for gid, name, blurb, photos in GALLERIES:
         figs = "\n".join("      <figure>%s</figure>" % img(p, zoom=True) for p in photos)
