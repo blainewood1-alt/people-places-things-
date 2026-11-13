@@ -204,6 +204,13 @@ def C(slug, alt, title):
 
 
 COMMISSIONS = [
+    ("underground", "Underground", "An editorial portrait session, from a bare wood floor to an abandoned, graffiti-covered lot.",
+     "underground-manhole", [
+        C("underground-curled-up", "A person in mesh and green corduroy curled up on a dark wood floor, seen from above", "Curled Up"),
+        C("underground-from-above", "A person in sunglasses sitting with arms folded over their knees on a wood floor, seen from above", "From Above"),
+        C("underground-red-room", "A person in wide jeans and sunglasses posing against graffiti, lit entirely in red", "Red Room"),
+        C("underground-profile", "Black and white profile of a man with a mohawk and sunglasses against a painted wall", "Profile"),
+        C("underground-manhole", "A man with arms spread inside a broken concrete pipe, looking up at the camera", "Manhole")]),
     ("airfield", "Cleared for Takeoff", "A portrait session at a small local airfield, from preflight to the left seat.",
      "airfield-by-the-plane", [
         C("airfield-headset", "A young pilot in a headset smiling from the cockpit", "Headset"),
