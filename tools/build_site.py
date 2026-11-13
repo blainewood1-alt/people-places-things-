@@ -166,7 +166,9 @@ GALLERIES = [
         F("in-the-woods", "A man in a fur hat and shearling coat standing in bare winter woods", "In the Woods"),
         F("blue-eyes", "A close-up of pale blue eyes, half the face in shadow", "Blue Eyes"),
         F("unspoken", "A blonde woman in a black cap and oval sunglasses in hard evening light", "Unspoken"),
-        F("half-light", "A man in a dark suit, his face cut in half by a slash of hard light", "Half Light")],
+        F("half-light", "A man in a dark suit, his face cut in half by a slash of hard light", "Half Light"),
+        F("surf-cart", "A barefoot fisherman pushing a cart of rods on orange wheels along the beach at sunset", "Surf Cart"),
+        F("no-parking", "A man in a hoodie and puffer jacket perched on a utility box under a traffic light at night", "No Parking")],
         # Sequence: dawn to night, alternating black-and-white and color.
         "Lone Angler", "The Fisherman", "River Crossing", "Morning Walk", "Peace Dove",
         "Over the Shoulder", "Platform", "Long Shadow", "Red Bike", "Into the Light",
@@ -174,8 +176,8 @@ GALLERIES = [
         "Rodeo Clown", "The Cowboy", "Three in Black", "Street Chess", "Looking Up",
         "Bench in the Light", "Waiting for a Set", "Paddle Out", "Sun Seeker", "Unspoken",
         "The Dive", "Splash Pad", "The Crowd", "Stone Steps", "Champions",
-        "On the Edge", "Platinum", "Two at Dusk", "Gray Beanie", "Birdcage",
-        "Night Parade", "Curlers", "In the Window", "After Hours", "Half Light", "Weathered",
+        "On the Edge", "Surf Cart", "Platinum", "Two at Dusk", "Gray Beanie", "Birdcage",
+        "Night Parade", "No Parking", "Curlers", "In the Window", "After Hours", "Half Light", "Weathered",
         "Blue Eyes", "On the Tracks", "The Doorway", "In the Woods", "Afternoon Nap")),
     ("places", "Places", "From Atlanta and beyond...", G(
         "Karst Valley", "Skyline Rays", "Lone Cypress", "Windswept",
@@ -223,8 +225,9 @@ SETS = [
         F("karst-valley", "Boats on a brown river winding between green limestone peaks", "Karst Valley"),
         F("rice-field", "A farmer in a conical hat bent over a bright green rice field below limestone hills", "Rice Field")]),
     ("Gulf Coast on Film", "Soft pastel sand and sky from one roll of film. Prints up to 20 × 30 in.", [
-        F("white-dunes", "", "White Dunes"), F("sea-oats", "", "Sea Oats"), F("film-palm", "", "Lone Palm"),
-        F("marsh", "", "Marsh"), F("walker-on-the-shore", "", "Walker on the Shore")]),
+        F("gulf-white-sand", "White sand and golden dune grass under a clear blue sky, a pier in the distance", "White Sand"),
+        F("gulf-sea-oats", "Sea oats on a sand dune in low evening light", "Sea Oats"),
+        F("gulf-lone-palm", "The sun flaring through a lone palm in the dunes", "Lone Palm")]),
 ]
 
 # ---------- helpers ----------
