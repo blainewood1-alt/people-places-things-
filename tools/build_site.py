@@ -189,7 +189,10 @@ GALLERIES = [
         F("rolling-hills", "Green rolling hills and a line of trees under a pink and teal dusk sky", "Rolling Hills"),
         F("blue-and-white", "Rows of blue and white striped umbrellas and blue loungers on a beach in Italy", "Blue and White"),
         F("green-water", "Emerald green surf rolling toward a hazy line of beach hotels", "Green Water"),
-        F("low-tide", "A lone figure on a bright sandbar beneath a dark bridge at low tide", "Low Tide")]),
+        F("low-tide", "A lone figure on a bright sandbar beneath a dark bridge at low tide", "Low Tide"),
+        F("orange-seller", "A street vendor in a conical hat arranging baskets of oranges on her bicycle as scooters pass in Hanoi", "Orange Seller"),
+        F("red-taxi", "A red taxi turning beneath a glowing neon sign on a dark Hong Kong street corner", "Red Taxi"),
+        F("cathedral-garden", "A cathedral spire rising behind clipped yew trees and white flowers under a blue sky", "Cathedral Garden")]),
     ("things", "Things", "Signs, neon, cars and the buildings around them.", G(
         "The Fox", "The Varsity", "Old Cadillac", "Motor Hotel, Black and White", "Atrium", "Ponce at Night", "Ribbed Corridor", "Ponce City Market", "Hood Ornament", "Miller's Rexall", "Motor Hotel, Afternoon", "Clermont Nights", "Swing Ride", "Georgia Girl",
         "Passing Train", "Mural Reflection") + [
