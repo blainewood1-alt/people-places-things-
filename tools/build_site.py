@@ -195,6 +195,28 @@ GALLERIES = [
         F("in-bottles", "A red vintage Coca-Cola machine beside a sticker-covered door in a dim bar", "In Bottles")]),
 ]
 
+# ---------- Commissions ----------
+# Each shoot: (slug, title, one line, cover file, [photos]). Add a new shoot by
+# adding an entry here (newest first) and its photos to images/commissions/.
+def C(slug, alt, title):
+    """A photo that lives in images/commissions."""
+    return ("commissions/" + slug + ".jpg", alt, title)
+
+
+COMMISSIONS = [
+    ("airfield", "Cleared for Takeoff", "A portrait session at a small local airfield, from preflight to the left seat.",
+     "airfield-by-the-plane", [
+        C("airfield-headset", "A young pilot in a headset smiling from the cockpit", "Headset"),
+        C("airfield-centerline", "A young man walking the yellow centerline of a taxiway toward the hangars", "Centerline"),
+        C("airfield-taxi-blur", "A young man in a white polo walking past a small plane, the background blurred with motion", "Passing Through"),
+        C("airfield-under-the-wing", "A young man sitting on the wheel under the wing of a small plane, black and white", "Under the Wing"),
+        C("airfield-left-seat", "A pilot in a headset at the controls, sun flaring through the windshield", "Left Seat"),
+        C("airfield-propeller", "A young man silhouetted against white sky, hands on a propeller", "Propeller"),
+        C("airfield-preflight", "A young man leaning into the open door of a small plane in late light", "Preflight"),
+        C("airfield-by-the-plane", "A young man sitting beside a small plane in warm evening light", "By the Plane")]),
+]
+
+
 # ---------- Print sets ----------
 SETS = [
     ("Quiet Coast", "Lone figures and a single cypress set against wide, bright, empty space.", [
@@ -347,9 +369,37 @@ def build_home():
 
 
 # ---------- Portfolio ----------
+def build_commissions():
+    cards, shoots = [], []
+    for slug, title, line, cover, photos in COMMISSIONS:
+        cards.append("""      <a class="gallery-card shoot-card" href="#shoot-%s" data-shoot="%s">
+        %s
+        <h3>%s</h3>
+        <p>%s &middot; %d photos</p>
+      </a>""" % (slug, slug, img(("commissions/%s.jpg" % cover, title, title)), e(title), e(line), len(photos)))
+        figs = "\n".join("      <figure>%s</figure>" % img(p, zoom=True) for p in photos)
+        shoots.append("""    <article class="shoot" id="shoot-%s" data-gallery hidden>
+      <p><a class="back-to-shoots" href="#commissions">&larr; All shoots</a></p>
+      <h3>%s</h3>
+      <p class="note">%s</p>
+      <div class="masonry">
+%s
+      </div>
+    </article>""" % (slug, e(title), e(line), figs))
+    return """  <section class="gallery tab-panel" id="commissions">
+    <h2>Commissions</h2>
+    <p class="note">Portrait sessions and other work made for clients. Pick a shoot to see the full set.</p>
+    <div class="gallery-cards shoot-list">
+%s
+    </div>
+%s
+  </section>""" % ("\n".join(cards), "\n".join(shoots))
+
+
 def build_portfolio():
     chips = "\n".join('    <a href="#%s" data-view="%s"%s>%s</a>' % (gid, gid, ' class="active"' if i == 0 else "", e(name))
                        for i, (gid, name, _, _) in enumerate(GALLERIES))
+    chips += '\n    <a href="#commissions" data-view="commissions">Commissions</a>'
     secs = []
     for gid, name, blurb, photos in GALLERIES:
         figs = "\n".join("      <figure>%s</figure>" % img(p, zoom=True) for p in photos)
@@ -360,6 +410,7 @@ def build_portfolio():
 %s
     </div>
   </section>""" % (gid, e(name), e(blurb), figs))
+    secs.append(build_commissions())
     body = """<main>
   <h1 class="page-title">Portfolio</h1>
   <nav class="chips view-tabs" aria-label="Galleries">

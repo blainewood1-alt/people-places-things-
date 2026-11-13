@@ -112,3 +112,32 @@
     t.addEventListener('click', function () { setTimeout(function () { walls.forEach(function (w) { if (w.offsetParent !== null) { w._n = null; layout(w); } }); }, 0); });
   });
 })();
+
+// Commissions: a list of shoots; picking one shows its gallery, and
+// "All shoots" goes back. #shoot-<slug> links open a shoot directly.
+(function () {
+  var panel = document.getElementById('commissions');
+  if (!panel) return;
+  var list = panel.querySelector('.shoot-list');
+  var shoots = Array.prototype.slice.call(panel.querySelectorAll('.shoot'));
+  var tab = document.querySelector('.view-tabs a[data-view="commissions"]');
+  function show(id) {
+    if (id && panel.hidden && tab) tab.click();
+    var found = false;
+    shoots.forEach(function (s) { var on = s.id === id; s.hidden = !on; if (on) found = true; });
+    list.hidden = found;
+    if (found) {
+      history.replaceState(null, '', '#' + id);
+      window.dispatchEvent(new Event('resize'));
+      panel.scrollIntoView();
+    }
+  }
+  panel.querySelectorAll('.shoot-card').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); show('shoot-' + a.getAttribute('data-shoot')); });
+  });
+  panel.querySelectorAll('.back-to-shoots').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); show(null); history.replaceState(null, '', '#commissions'); panel.scrollIntoView(); });
+  });
+  if (tab) tab.addEventListener('click', function () { show(null); });
+  if (/^#shoot-/.test(location.hash)) show(location.hash.slice(1));
+})();
