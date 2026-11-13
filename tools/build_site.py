@@ -196,7 +196,9 @@ GALLERIES = [
 # ---------- Print sets ----------
 SETS = [
     ("Quiet Coast", "Lone figures and a single cypress set against wide, bright, empty space.", [
-        F("on-the-edge", "", "On the Edge"), F("lone-cypress", "", "Lone Cypress"), F("low-tide", "", "Low Tide")]),
+        F("qc-on-the-edge", "A lone figure on a dark cliff above the surf, white sky", "On the Edge"),
+        F("qc-lone-cypress", "A wind-shaped cypress silhouetted over the sea, pelicans flying past", "Lone Cypress"),
+        F("qc-low-tide", "A lone figure on a bright sandbar beneath a dark bridge at low tide", "Low Tide")]),
     ("In Motion", "City crowds moving between deep shadow and hard light.", [
         F("going-up", "People riding a long escalator out of the dark", "Going Up"), P("Splash Pad"), P("Stone Steps")]),
     ("Surf Town", "Warm, faded afternoons on the Southern California coast.", [
