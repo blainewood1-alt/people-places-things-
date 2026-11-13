@@ -246,7 +246,7 @@ SETS = [
         F("green-onions", "A vendor bagging chopped green onions in front of a painted yellow wall", "Green Onions"),
         F("karst-valley", "Boats on a brown river winding between green limestone peaks", "Karst Valley"),
         F("rice-field", "A farmer in a conical hat bent over a bright green rice field below limestone hills", "Rice Field")]),
-    ("Gulf Coast on Film", "Soft pastel sand and sky from one roll of film. Prints up to 20 × 30 in.", [
+    ("Gulf Coast on Film", "Soft pastel sand and sky from one roll of film.", [
         F("gulf-white-sand", "White sand and golden dune grass under a clear blue sky, a pier in the distance", "White Sand"),
         F("gulf-sea-oats", "Sea oats on a sand dune in low evening light", "Sea Oats"),
         F("gulf-lone-palm", "The sun flaring through a lone palm in the dunes", "Lone Palm")]),
