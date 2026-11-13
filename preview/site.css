@@ -58,7 +58,7 @@ h2{font-size:1.8rem;margin:0 0 8px}
 .gallery{scroll-margin-top:110px}
 [hidden]{display:none!important}
 .shoot-card p{margin-top:2px}
-.back-to-shoots{font-family:var(--sans);font-size:.88rem;text-decoration:none}
+.back-to-shoots{font-family:var(--sans);font-size:1.15rem;font-weight:500;text-decoration:none}
 .back-to-shoots:hover{text-decoration:underline}
 .shoot h3{font-size:1.6rem;margin:8px 0 4px}
 .masonry{columns:3 280px;column-gap:16px}
