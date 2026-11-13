@@ -388,6 +388,7 @@ def build_home():
     <h1>Blaine Wood Photo</h1>
     <p>People, places and things around Atlanta and beyond.</p>
     <a class="btn btn-light" href="portfolio.html">See the work</a>
+    <a class="btn btn-light" href="prints.html">Buy a print</a>
   </div>
 </section>
 <main>
