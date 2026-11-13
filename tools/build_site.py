@@ -104,7 +104,7 @@ _OLD_GALLERIES = [
         F("looking-up", "A woman in sunglasses looking up, in black and white", "Looking Up"),
         P("Gray Beanie"), F("waiting-at-marta", "A woman in a striped dress waiting outside a MARTA station", "Waiting at MARTA"),
         F("three-on-a-wall", "Three friends sitting on a low wall", "Three on a Wall"),
-        P("The Fisherman"), P("Sun Seeker"),
+        ("prints/the-fisherman.jpg", "A man fly fishing at the edge of a wooded pond", "The Fisherman"), P("Sun Seeker"),
     ]),
     ("film", "Film", "One roll on the Gulf Coast, plus a few frames from home.", [
         F("white-dunes", "White dunes and green brush under a pale sky", "White Dunes"),
