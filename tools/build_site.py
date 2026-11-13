@@ -204,6 +204,15 @@ def C(slug, alt, title):
 
 
 COMMISSIONS = [
+    ("rail-yard", "Rail Yard", "A fashion portrait session around the rail yard, from golden hour on the tracks to hard shadow under the bridge.",
+     "railyard-reading", [
+        C("railyard-reading", "A young man in a herringbone coat reading a book on a wooden chair set on railroad tracks", "Reading on the Tracks"),
+        C("railyard-sun-flare", "Black and white portrait of a young man in a shearling jacket holding a book, the sun flaring behind him over the tracks", "Sun Flare"),
+        C("railyard-herringbone", "A young man in an open herringbone coat and layered necklaces, lit by a slash of sun under a bridge", "Herringbone"),
+        C("railyard-wild-hair", "Black and white portrait of a young man with wind-tossed hair and a yin-yang pendant", "Wild Hair"),
+        C("railyard-crouch", "A young man in a black shearling coat crouching in a pool of light against a dark background", "Crouch"),
+        C("railyard-half-light", "Black and white photo of a young man in an open coat, half in shadow, under a graffiti-covered bridge", "Half Light"),
+        C("railyard-graffiti-glow", "A young man in a dark turtleneck and shearling coat beside a glowing graffiti wall", "Graffiti Glow")]),
     ("best-friend", "Best Friend", "A portrait session with a man and his dog, at home, around the neighborhood and out under the skyline.",
      "bestfriend-green-sofa", [
         C("bestfriend-in-his-arms", "A smiling man in a dark blazer holding his gray schnauzer mix by a window", "In His Arms"),
