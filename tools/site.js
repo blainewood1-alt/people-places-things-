@@ -140,4 +140,9 @@
   });
   if (tab) tab.addEventListener('click', function () { show(null); });
   if (/^#shoot-/.test(location.hash)) show(location.hash.slice(1));
+  // The "available as prints" line doesn't apply to client work.
+  var cta = document.getElementById('prints-cta');
+  function syncCta() { if (cta) cta.hidden = !panel.hidden; }
+  document.querySelectorAll('.view-tabs a').forEach(function (t) { t.addEventListener('click', function () { setTimeout(syncCta, 0); }); });
+  syncCta();
 })();

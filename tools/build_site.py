@@ -417,7 +417,7 @@ def build_portfolio():
 %s
   </nav>
 %s
-  <p class="cta">Like something you see? <a href="prints.html">Most of these are available as prints.</a></p>
+  <p class="cta" id="prints-cta">Like something you see? <a href="prints.html">Most of these are available as prints.</a></p>
   <p class="to-top"><a class="btn" href="#top">Back to top &uarr;</a></p>
 </main>""" % (chips, "\n".join(secs))
     page("portfolio.html", "Portfolio | Blaine Wood Photo", body,
