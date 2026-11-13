@@ -240,7 +240,7 @@ COMMISSIONS = [
         C("warpaint-gloved-fist", "A woman in face paint punching a gloved fist toward the camera in front of graffiti", "Gloved Fist"),
         C("warpaint-blonde-wig", "Black and white portrait of a woman in a blonde wig with bangs", "Blonde Wig")]),
     ("cold-snap", "Cold Snap", "A winter portrait session in the woods, along the trail and out by the lake.",
-     "coldsnap-tall-grass", [
+     "coldsnap-goggles", [
         C("coldsnap-goggles", "Black and white close-up of a platinum-haired man in round welding goggles", "Goggles"),
         C("coldsnap-fallen-log", "A small figure in an orange coat sitting on a fallen, ivy-covered tree in green woods", "Fallen Log"),
         C("coldsnap-shopping-cart", "A man in goggles and a fur coat lounging in a shopping cart on a dirt path", "Shopping Cart"),
