@@ -204,6 +204,19 @@ def C(slug, alt, title):
 
 
 COMMISSIONS = [
+    ("war-paint", "War Paint", "A street portrait session along the tracks, from quiet black and white to war paint under red light.",
+     "warpaint-red-light", [
+        C("warpaint-tracks", "Black and white portrait of a woman with long braids in an embroidered dress beside train tracks", "The Tracks"),
+        C("warpaint-spray-can", "Black and white portrait of a woman in a fur coat holding a spray can against a graffiti-covered wall", "Spray Can"),
+        C("warpaint-over-the-shoulder", "Black and white close-up of a blonde woman looking back over her shoulder", "Over the Shoulder"),
+        C("warpaint-behind-bars", "Black and white photo of a woman screaming behind metal bars", "Behind Bars"),
+        C("warpaint-embroidered-dress", "Black and white photo of a woman with braids in an embroidered dress standing on train tracks", "Embroidered Dress"),
+        C("warpaint-smeared-paint", "Black and white close-up of a woman's face with smeared black paint", "Smeared Paint"),
+        C("warpaint-blonde-wig", "Black and white portrait of a woman in a blonde wig with bangs", "Blonde Wig"),
+        C("warpaint-pink-hair", "A woman with pink hair skateboarding under a teal sky", "Pink Hair"),
+        C("warpaint-blue-eyes", "Close-up of blue eyes framed by black face paint", "Blue Eyes"),
+        C("warpaint-red-light", "A woman in face paint and dog tags crouching in front of red-lit graffiti", "Red Light"),
+        C("warpaint-gloved-fist", "A woman in face paint punching a gloved fist toward the camera in front of graffiti", "Gloved Fist")]),
     ("cold-snap", "Cold Snap", "A winter portrait session in the woods, along the trail and out by the lake.",
      "coldsnap-tall-grass", [
         C("coldsnap-fallen-log", "A small figure in an orange coat sitting on a fallen, ivy-covered tree in green woods", "Fallen Log"),
