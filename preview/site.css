@@ -60,6 +60,8 @@ h2{font-size:1.8rem;margin:0 0 8px}
 .chips a.active{background:var(--accent);border-color:var(--accent);color:#fff}
 .gallery{scroll-margin-top:110px}
 [hidden]{display:none!important}
+.shoot-card{background:var(--panel);padding:20px 20px 24px;display:block}
+.shoot-card h3{margin-top:16px}
 .shoot-card p{margin-top:2px}
 .back-to-shoots{font-family:var(--sans);font-size:1.15rem;font-weight:500;text-decoration:none}
 .back-to-shoots:hover{text-decoration:underline}
@@ -139,6 +141,8 @@ h2{font-size:1.8rem;margin:0 0 8px}
   .gallery-cards{gap:16px}
   .split,.contact-cols,.about{grid-template-columns:1fr;gap:20px}
   .split.two{grid-template-columns:1fr}
+  .shoot-card{padding:12px 12px 16px}
+  .shoot-card h3{margin-top:10px}
   .split>div,.contact-cols>div{padding:24px}
   .masonry{columns:2;column-gap:8px}
   .masonry figure{margin-bottom:8px}
