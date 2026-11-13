@@ -24,7 +24,6 @@ h2{font-size:1.8rem;margin:0 0 8px}
 .btn:hover{opacity:.9}
 .btn-outline{background:transparent;color:var(--accent)}
 .btn-light{background:#fff;color:#111;border-color:#fff;margin-top:18px}
-.btn-light+.btn-light{margin-left:10px}
 
 /* home */
 .hero{position:relative;height:82vh;min-height:420px;background:#111 center 60%/cover no-repeat;display:flex;align-items:flex-end}
