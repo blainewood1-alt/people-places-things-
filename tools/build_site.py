@@ -405,7 +405,7 @@ def build_home():
       <a class="btn" href="portfolio.html">See the portfolio</a>
     </div>
     <div>
-      <h2>Prints</h2>
+      <h2>Prints For Purchase</h2>
       <p>The images are thoughtfully printed on premium papers with pigment inks from 8 &times; 12 up to 24 &times; 36 inches, on their own or as a set of related images.</p>
       <a class="btn" href="prints.html">Browse prints and sets</a>
     </div>
