@@ -401,7 +401,7 @@ def build_home():
   <section class="split">
     <div>
       <h2>Portfolio</h2>
-      <p>Three galleries showcasing some of my favorite photos: people, places and things.</p>
+      <p>Galleries showcasing my photos: commissions, people, places and things.</p>
       <a class="btn" href="portfolio.html">See the portfolio</a>
     </div>
     <div>
