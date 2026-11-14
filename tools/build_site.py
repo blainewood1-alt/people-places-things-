@@ -619,7 +619,7 @@ def build_contact():
   <div class="contact-cols">
     <div>
       <h2>Prints</h2>
-      <p>Tell me which photo or set you'd like and the size. I'll reply with the price, paper options and shipping.</p>
+      <p>See an image or set not listed for purchase? Tell me which photos or sets you'd like, the size and I'll reply with the purchase details.</p>
       <a class="btn" href="prints.html">Browse prints</a>
     </div>
     <div>
