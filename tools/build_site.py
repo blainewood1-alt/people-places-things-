@@ -620,7 +620,7 @@ def build_contact():
     <div>
       <h2>Prints</h2>
       <p>See an image or set not listed for purchase? Tell me which photos or sets you'd like, the size and I'll reply with the purchase details.</p>
-      <a class="btn" href="mailto:%s?subject=Print%%20request&amp;body=Hi%%20Blaine%%2C%%0A%%0AI%%27d%%20like%%20to%%20order%%3A%%20%%0ASize%%3A%%20">Request a print</a>
+      <a class="btn" href="mailto:%s?subject=Print%%20request&amp;body=Hi%%20Blaine%%2C%%0A%%0AI%%27d%%20like%%20to%%20order%%3A%%20%%0ASize%%3A%%20">Send an inquiry</a>
     </div>
     <div>
       <h2>Portraits, events and projects</h2>
