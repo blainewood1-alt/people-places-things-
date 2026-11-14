@@ -299,6 +299,12 @@ COMMISSIONS = [
 
 
 # ---------- Print sets ----------
+# Where each set was shot, shown under its name (sets not listed show no place).
+SET_PLACES = {
+    "Quiet Coast": "Southern California", "In Motion": "Atlanta, GA", "Surf Town": "Southern California",
+    "On the Pier": "Okaloosa Island, FL", "Red Light": "Atlanta, GA", "Into the Pines": "Pensacola, FL",
+    "Gulf Coast on Film": "Okaloosa Island, FL",
+}
 SETS = [
     ("Quiet Coast", "Lone figures and a single cypress set against wide, bright, empty space.", [
         F("qc-on-the-edge", "A lone figure on a dark cliff above the surf, white sky", "On the Edge"),
@@ -521,12 +527,12 @@ def build_prints():
 %s
       </div>
       <div class="set-info">
-        <h3>%s</h3>
+        <h3>%s</h3>%s
         <p>%s</p>
         <p class="meta">%s</p>
         <div class="buy">%s %s <a class="btn" href="mailto:%s">Buy set</a></div>
       </div>
-    </article>""" % (" two" if n == 4 else "", 2 if n == 4 else n, ";--ar:3/2" if wide else "", thumbs, e(name), e(blurb), e(names), count, size_select("Size for " + name), EMAIL))
+    </article>""" % (" two" if n == 4 else "", 2 if n == 4 else n, ";--ar:3/2" if wide else "", thumbs, e(name), ('\n        <p class="place">%s</p>' % e(SET_PLACES[name])) if name in SET_PLACES else "", e(blurb), e(names), count, size_select("Size for " + name), EMAIL))
     singles = []
     for f, alt, title, place in PRINTS:
         singles.append("""    <article class="print">
