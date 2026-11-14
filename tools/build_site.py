@@ -102,7 +102,7 @@ _OLD_GALLERIES = [
     ("faces", "Faces", "Strangers and neighbors met along the way.", [
         P("The Cowboy"), F("the-barber", "A barber at work by a window", "The Barber"),
         F("looking-up", "A woman in sunglasses looking up, in black and white", "Looking Up"),
-        P("Gray Beanie"), F("waiting-at-marta", "A woman in a striped dress waiting outside a MARTA station", "Waiting at MARTA"),
+        ("prints/l1009283.jpg", "A bearded man in a knit cap looking down", "Gray Beanie"), F("waiting-at-marta", "A woman in a striped dress waiting outside a MARTA station", "Waiting at MARTA"),
         F("three-on-a-wall", "Three friends sitting on a low wall", "Three on a Wall"),
         ("prints/the-fisherman.jpg", "A man fly fishing at the edge of a wooded pond", "The Fisherman"), P("Sun Seeker"),
     ]),
