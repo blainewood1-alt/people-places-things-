@@ -209,6 +209,17 @@ def C(slug, alt, title):
 
 
 COMMISSIONS = [
+    ("welcome-home", "Welcome Home", "A newborn session at home, from the nursery to the front steps, with the whole family and the dog.",
+     "welcome-front-steps", [
+        C("welcome-front-steps", "A couple sitting on their front steps with their big shaggy dog and their newborn", "Front Steps"),
+        C("welcome-family-bed", "Black and white photo of a couple in bed with their newborn and their dog at the foot of the bed", "Family Bed"),
+        C("welcome-in-her-arms", "A mother in a rocking chair holding her sleeping newborn against her chest", "In Her Arms"),
+        C("welcome-by-the-window", "Black and white profile of a new father in soft window light", "By the Window"),
+        C("welcome-bedtime", "A couple in bed with their newborn while their shaggy dog sprawls across the foot of the bed", "Bedtime"),
+        C("welcome-first-smile", "Black and white close-up of a smiling newborn held against a parent's shoulder", "First Smile"),
+        C("welcome-the-mobile", "A newborn asleep on striped sheets in a crib, seen from above through a blurred paper mobile", "The Mobile"),
+        C("welcome-family-portrait", "Black and white portrait of a smiling couple with their dog and their newborn", "Family Portrait"),
+        C("welcome-first-nap", "Close-up of a sleeping newborn with dark hair on striped crib sheets", "First Nap")]),
     ("rail-yard", "Rail Yard", "A fashion portrait session around the rail yard, from golden hour on the tracks to hard shadow under the bridge.",
      "railyard-reading", [
         C("railyard-reading", "A young man in a herringbone coat reading a book on a wooden chair set on railroad tracks", "Reading on the Tracks"),
