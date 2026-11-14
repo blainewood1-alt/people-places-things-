@@ -198,7 +198,8 @@ GALLERIES = [
         "The Fox", "The Varsity", "Old Cadillac", "Motor Hotel, Black and White", "Atrium", "Ponce at Night", "Ribbed Corridor", "Ponce City Market", "Hood Ornament", "Miller's Rexall", "Motor Hotel, Afternoon", "Clermont Nights", "Swing Ride", "Georgia Girl",
         "Passing Train", "Mural Reflection") + [
         F("red-car", "A red sports car parked alone at the end of an empty, weathered concrete garage", "Red Car"),
-        F("in-bottles", "A red vintage Coca-Cola machine beside a sticker-covered door in a dim bar", "In Bottles")]),
+        F("in-bottles", "A red vintage Coca-Cola machine beside a sticker-covered door in a dim bar", "In Bottles"),
+        F("red-chair", "A red wooden chair in a slash of sunlight beside an old stone wall and a parked bicycle", "Red Chair")]),
 ]
 
 # ---------- Commissions ----------
