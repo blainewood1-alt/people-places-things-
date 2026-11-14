@@ -209,6 +209,21 @@ def C(slug, alt, title):
 
 
 COMMISSIONS = [
+    ("last-train", "Last Train", "A street portrait session with two friends, from the subway platform to the plazas downtown.",
+     "lasttrain-bucket-list", [
+        C("lasttrain-car-doors", "A girl in a graphic tee and fishnets standing wide-legged inside a subway car", "Car Doors"),
+        C("lasttrain-the-platform", "Black and white photo of two friends standing on a dark subway platform", "The Platform"),
+        C("lasttrain-station-light", "A girl with curly hair in a graphic tee caught in a slice of light in a dark station", "Station Light"),
+        C("lasttrain-red-door", "A girl in a graphic tee and fishnets posing against a red-lit door", "Red Door"),
+        C("lasttrain-train-blur", "Black and white photo of two friends on a platform as a train streaks past behind them", "Train Blur"),
+        C("lasttrain-pay-phone", "A girl in a flame tee on an old pay phone in blue light", "Pay Phone"),
+        C("lasttrain-bucket-list", "Two friends lounging across the seats of a subway car under a Bucket List ad", "Bucket List"),
+        C("lasttrain-purple-edge", "A girl with curly hair in a graphic tee against a sunlit stone wall beside a purple panel", "Purple Edge"),
+        C("lasttrain-tile-wall", "Black and white portrait of a blonde girl leaning her head against a tiled wall", "Tile Wall"),
+        C("lasttrain-eyes-closed", "A girl in a yellow ruffled top tilting her head back with eyes closed below a tall building", "Eyes Closed"),
+        C("lasttrain-on-the-ledge", "A girl in a flame tee and ripped jeans sitting on a stone ledge", "On the Ledge"),
+        C("lasttrain-flying-kick", "Black and white photo of a girl in a flame tee mid-air in a flying kick beside a lamppost", "Flying Kick"),
+        C("lasttrain-reflection", "A girl's dark silhouette reflected in a window over an empty plaza and stairs", "Reflection")]),
     ("welcome-home", "Welcome Home", "A newborn session at home, from the nursery to the front steps, with the whole family and the dog.",
      "welcome-front-steps", [
         C("welcome-front-steps", "A couple sitting on their front steps with their big shaggy dog and their newborn", "Front Steps"),

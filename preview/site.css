@@ -46,6 +46,7 @@ h2{font-size:1.8rem;margin:0 0 8px}
 .gallery-card{text-decoration:none}
 .gallery-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#ddd}
 .shoot-card[data-shoot="rail-yard"] img{object-position:center 22%}
+.shoot-card[data-shoot="last-train"] img{object-position:center 25%}
 .gallery-card h3{margin:12px 0 0;font-size:1.25rem}
 .gallery-card p{margin:0;font-family:var(--sans);font-size:.85rem;color:var(--muted)}
 .gallery-card:hover h3{text-decoration:underline;text-underline-offset:5px}
