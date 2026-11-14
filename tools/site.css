@@ -8,7 +8,9 @@ img{max-width:100%;height:auto}
 /* header */
 .site-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 24px;padding:20px 32px;border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
 .logo{text-decoration:none;font-size:1.35rem;letter-spacing:.08em;text-transform:uppercase;line-height:1.2}
-.logo span{display:block;font-family:var(--sans);font-size:.68rem;letter-spacing:.18em;color:var(--muted)}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:46px;height:31px;flex:none;color:var(--text)}
+.logo-text span{display:block;font-family:var(--sans);font-size:.68rem;letter-spacing:.18em;color:var(--muted)}
 .site-header nav{display:flex;flex-wrap:wrap;gap:6px 22px}
 .site-header nav a{text-decoration:none;font-family:var(--sans);font-size:.95rem;color:var(--muted);padding:4px 0;border-bottom:1px solid transparent}
 .site-header nav a.active,.site-header nav a:hover{color:var(--text);border-bottom-color:var(--text)}
