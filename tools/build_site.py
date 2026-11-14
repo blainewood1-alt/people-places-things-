@@ -536,7 +536,7 @@ def build_prints():
     </article>""" % (img(("prints/" + f, alt, title), zoom=True), e(title), size_select("Size for " + title), EMAIL))
     body = """<main>
   <h1 class="page-title">Prints</h1>
-  <p class="note">Every print is made to order on premium papers with pigment inks. Choose a size and click Buy to send me an order request, and I'll reply with the price and details. Prints ship in 5&ndash;7 days.</p>
+  <p class="note">Every print is made to order on premium papers with pigment inks. Choose a size and click Buy to send me an order request, and I'll reply with the price and details.</p>
   <nav class="chips view-tabs" aria-label="Print sections">
     <a href="#singles" data-view="singles" class="active" aria-current="true">Single prints</a>
     <a href="#sets" data-view="sets">Sets</a>
