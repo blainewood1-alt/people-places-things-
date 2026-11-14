@@ -209,6 +209,30 @@ def C(slug, alt, title):
 
 
 COMMISSIONS = [
+    ("war-paint", "War Paint", "A street portrait session along the tracks, from quiet black and white to war paint under red light.",
+     "warpaint-red-light", [
+        C("warpaint-tracks", "Black and white portrait of a woman with long braids in an embroidered dress beside train tracks", "The Tracks"),
+        C("warpaint-pink-hair", "A woman with pink hair skateboarding under a teal sky", "Pink Hair"),
+        C("warpaint-spray-can", "Black and white portrait of a woman in a fur coat holding a spray can against a graffiti-covered wall", "Spray Can"),
+        C("warpaint-over-the-shoulder", "Black and white close-up of a blonde woman looking back over her shoulder", "Over the Shoulder"),
+        C("warpaint-blue-eyes", "Close-up of blue eyes framed by black face paint", "Blue Eyes"),
+        C("warpaint-behind-bars", "Black and white photo of a woman screaming behind metal bars", "Behind Bars"),
+        C("warpaint-red-light", "A woman in face paint and dog tags crouching in front of red-lit graffiti", "Red Light"),
+        C("warpaint-embroidered-dress", "Black and white photo of a woman with braids in an embroidered dress standing on train tracks", "Embroidered Dress"),
+        C("warpaint-smeared-paint", "Black and white close-up of a woman's face with smeared black paint", "Smeared Paint"),
+        C("warpaint-gloved-fist", "A woman in face paint punching a gloved fist toward the camera in front of graffiti", "Gloved Fist"),
+        C("warpaint-blonde-wig", "Black and white portrait of a woman in a blonde wig with bangs", "Blonde Wig")]),
+    ("cold-snap", "Cold Snap", "A winter portrait session in the woods, along the trail and out by the lake.",
+     "coldsnap-goggles", [
+        C("coldsnap-goggles", "Black and white close-up of a platinum-haired man in round welding goggles", "Goggles"),
+        C("coldsnap-fallen-log", "A small figure in an orange coat sitting on a fallen, ivy-covered tree in green woods", "Fallen Log"),
+        C("coldsnap-shopping-cart", "A man in goggles and a fur coat lounging in a shopping cart on a dirt path", "Shopping Cart"),
+        C("coldsnap-in-the-trees", "A man in a fur hat and shearling coat standing among bare winter trees", "In the Trees"),
+        C("coldsnap-tall-grass", "A man in a fur hat, sunglasses and shearling coat standing in tall winter grass at sunset", "Tall Grass"),
+        C("coldsnap-flat-cap", "Black and white portrait of a man in a flat cap, dark round glasses and a wool scarf", "Flat Cap"),
+        C("coldsnap-pedestal", "A man in a plaid suit and flat cap standing on a stone pedestal in front of a lake", "Pedestal"),
+        C("coldsnap-skyline", "A platinum-haired man in a shearling coat in a park, the city skyline under storm clouds behind him", "Skyline"),
+        C("coldsnap-the-trail", "A small figure in a fur hat standing on a gravel trail between bare trees", "The Trail")]),
     ("last-train", "Last Train", "A street portrait session with two friends, from the subway platform to the plazas downtown.",
      "lasttrain-bucket-list", [
         C("lasttrain-car-doors", "A girl in a graphic tee and fishnets standing wide-legged inside a subway car", "Car Doors"),
@@ -252,30 +276,6 @@ COMMISSIONS = [
         C("bestfriend-sunglasses", "Close-up of a man in tortoiseshell sunglasses and a striped polo looking down in golden light", "Sunglasses"),
         C("bestfriend-jacket-over-shoulder", "Black and white portrait of a man in a white shirt with a tweed jacket slung over his shoulder", "Jacket Over the Shoulder"),
         C("bestfriend-green-sofa", "A man sitting on a green velvet sofa with his dog, beneath a gallery wall of paintings", "Green Sofa")]),
-    ("war-paint", "War Paint", "A street portrait session along the tracks, from quiet black and white to war paint under red light.",
-     "warpaint-red-light", [
-        C("warpaint-tracks", "Black and white portrait of a woman with long braids in an embroidered dress beside train tracks", "The Tracks"),
-        C("warpaint-pink-hair", "A woman with pink hair skateboarding under a teal sky", "Pink Hair"),
-        C("warpaint-spray-can", "Black and white portrait of a woman in a fur coat holding a spray can against a graffiti-covered wall", "Spray Can"),
-        C("warpaint-over-the-shoulder", "Black and white close-up of a blonde woman looking back over her shoulder", "Over the Shoulder"),
-        C("warpaint-blue-eyes", "Close-up of blue eyes framed by black face paint", "Blue Eyes"),
-        C("warpaint-behind-bars", "Black and white photo of a woman screaming behind metal bars", "Behind Bars"),
-        C("warpaint-red-light", "A woman in face paint and dog tags crouching in front of red-lit graffiti", "Red Light"),
-        C("warpaint-embroidered-dress", "Black and white photo of a woman with braids in an embroidered dress standing on train tracks", "Embroidered Dress"),
-        C("warpaint-smeared-paint", "Black and white close-up of a woman's face with smeared black paint", "Smeared Paint"),
-        C("warpaint-gloved-fist", "A woman in face paint punching a gloved fist toward the camera in front of graffiti", "Gloved Fist"),
-        C("warpaint-blonde-wig", "Black and white portrait of a woman in a blonde wig with bangs", "Blonde Wig")]),
-    ("cold-snap", "Cold Snap", "A winter portrait session in the woods, along the trail and out by the lake.",
-     "coldsnap-goggles", [
-        C("coldsnap-goggles", "Black and white close-up of a platinum-haired man in round welding goggles", "Goggles"),
-        C("coldsnap-fallen-log", "A small figure in an orange coat sitting on a fallen, ivy-covered tree in green woods", "Fallen Log"),
-        C("coldsnap-shopping-cart", "A man in goggles and a fur coat lounging in a shopping cart on a dirt path", "Shopping Cart"),
-        C("coldsnap-in-the-trees", "A man in a fur hat and shearling coat standing among bare winter trees", "In the Trees"),
-        C("coldsnap-tall-grass", "A man in a fur hat, sunglasses and shearling coat standing in tall winter grass at sunset", "Tall Grass"),
-        C("coldsnap-flat-cap", "Black and white portrait of a man in a flat cap, dark round glasses and a wool scarf", "Flat Cap"),
-        C("coldsnap-pedestal", "A man in a plaid suit and flat cap standing on a stone pedestal in front of a lake", "Pedestal"),
-        C("coldsnap-skyline", "A platinum-haired man in a shearling coat in a park, the city skyline under storm clouds behind him", "Skyline"),
-        C("coldsnap-the-trail", "A small figure in a fur hat standing on a gravel trail between bare trees", "The Trail")]),
     ("underground", "Underground", "An editorial portrait session, from a bare wood floor to an abandoned, graffiti-covered lot.",
      "underground-manhole", [
         C("underground-curled-up", "A person in mesh and green corduroy curled up on a dark wood floor, seen from above", "Curled Up"),
@@ -292,7 +292,7 @@ COMMISSIONS = [
         C("airfield-left-seat", "A pilot in a headset at the controls, sun flaring through the windshield", "Left Seat"),
         C("airfield-preflight", "A young man leaning into the open door of a small plane in late light", "Preflight"),
         C("airfield-propeller", "A young man silhouetted against white sky, hands on a propeller", "Propeller"),
-        C("airfield-by-the-plane", "A young man sitting beside a small plane in warm evening light", "By the Plane")]),
+        C("airfield-by-the-plane", "A young man sitting beside a small plane in warm evening light", "By the Plane")])
 ]
 
 
