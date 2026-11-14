@@ -218,7 +218,7 @@ COMMISSIONS = [
         C("railyard-crouch", "A young man in a black shearling coat crouching in a pool of light against a dark background", "Crouch"),
         C("railyard-half-light", "Black and white photo of a young man in an open coat, half in shadow, under a graffiti-covered bridge", "Half Light"),
         C("railyard-graffiti-glow", "A young man in a dark turtleneck and shearling coat beside a glowing graffiti wall", "Graffiti Glow")]),
-    ("best-friend", "Best Friend", "A portrait session with a man and his dog, at home, around the neighborhood and out under the skyline.",
+    ("best-friend", "Best Friend", "A portrait session at home, around the neighborhood and out under the skyline.",
      "bestfriend-green-sofa", [
         C("bestfriend-in-his-arms", "A smiling man in a dark blazer holding his gray schnauzer mix by a window", "In His Arms"),
         C("bestfriend-skyline-walk", "Black and white silhouette of a man walking his dog along a ridge below the city skyline", "Skyline Walk"),
