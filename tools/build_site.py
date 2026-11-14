@@ -192,7 +192,8 @@ GALLERIES = [
         F("low-tide", "A lone figure on a bright sandbar beneath a dark bridge at low tide", "Low Tide"),
         F("orange-seller", "A street vendor in a conical hat arranging baskets of oranges on her bicycle as scooters pass in Hanoi", "Orange Seller"),
         F("red-taxi", "A red taxi turning beneath a glowing neon sign on a dark Hong Kong street corner", "Red Taxi"),
-        F("cathedral-garden", "A cathedral spire rising behind clipped yew trees and white flowers under a blue sky", "Cathedral Garden")]),
+        F("cathedral-garden", "A cathedral spire rising behind clipped yew trees and white flowers under a blue sky", "Cathedral Garden"),
+        F("riomaggiore", "Pastel houses stacked up a steep green valley in Riomaggiore, Italy, with a church bell tower on the left", "Riomaggiore")]),
     ("things", "Things", "Signs, neon, cars and the buildings around them.", G(
         "The Fox", "The Varsity", "Old Cadillac", "Motor Hotel, Black and White", "Atrium", "Ponce at Night", "Ribbed Corridor", "Ponce City Market", "Hood Ornament", "Miller's Rexall", "Motor Hotel, Afternoon", "Clermont Nights", "Swing Ride", "Georgia Girl",
         "Passing Train", "Mural Reflection") + [
