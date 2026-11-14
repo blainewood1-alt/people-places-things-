@@ -614,8 +614,11 @@ def build_about():
 def build_contact():
     body = """<main class="narrow">
   <h1 class="page-title">Contact</h1>
-  <p class="lead">The easiest way to reach me is email:</p>
-  <p class="email"><a href="mailto:%s">%s</a></p>
+  <div class="email-box">
+    <p class="lead">The easiest way to reach me is email:</p>
+    <p class="email"><a href="mailto:%s">%s</a></p>
+    <a class="btn" href="mailto:%s?subject=Hello%%20Blaine">Email me</a>
+  </div>
   <div class="contact-cols">
     <div>
       <h2>Prints</h2>
@@ -628,7 +631,7 @@ def build_contact():
       <a class="btn" href="mailto:%s?subject=Photography%%20inquiry">Send an inquiry</a>
     </div>
   </div>
-</main>""" % (EMAIL, EMAIL, EMAIL, EMAIL)
+</main>""" % (EMAIL, EMAIL, EMAIL, EMAIL, EMAIL)
     page("contact.html", "Contact | Blaine Wood Photo", body,
          "Get in touch with Blaine Wood about prints, portraits, events or projects.")
 

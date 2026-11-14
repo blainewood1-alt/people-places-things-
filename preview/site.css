@@ -103,8 +103,10 @@ h2{font-size:1.8rem;margin:0 0 8px}
 .about img{width:100%;display:block}
 .about h2{font-size:1.4rem;margin-top:28px}
 .lead{font-size:1.2rem;margin:0}
-.email{font-size:clamp(1.4rem,4vw,2.2rem);margin:4px 0 48px;word-break:break-word}
-.email a{text-decoration:none;border-bottom:1px solid var(--line)}
+.email-box{background:var(--panel);padding:32px;margin-bottom:28px;border-left:4px solid var(--accent)}
+.email{font-size:clamp(1.4rem,4vw,2.2rem);margin:4px 0 20px;word-break:break-word}
+.email a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent)}
+.email a:hover{opacity:.8}
 .contact-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .contact-cols>div{background:var(--panel);padding:32px}
 .contact-cols h2{font-size:1.4rem}
@@ -148,7 +150,7 @@ h2{font-size:1.8rem;margin:0 0 8px}
   .split.two{grid-template-columns:1fr}
   .shoot-card{padding:12px 12px 16px}
   .shoot-card h3{margin-top:10px}
-  .split>div,.contact-cols>div{padding:24px}
+  .split>div,.contact-cols>div,.email-box{padding:24px}
   .masonry{columns:2;column-gap:8px}
   .masonry figure{margin-bottom:8px}
   .masonry.ordered{gap:8px}
