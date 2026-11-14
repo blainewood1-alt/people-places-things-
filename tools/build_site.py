@@ -595,7 +595,7 @@ def build_about():
         <div>
           <h2>Prints</h2>
           <p>Every print is made to order on archival paper with pigment inks so it will last for decades.</p>
-          <a class="btn" href="prints.html">See what's available</a>
+          <a class="btn" href="prints.html">Browse prints and sets</a>
         </div>
         <div>
           <h2>Working together</h2>
