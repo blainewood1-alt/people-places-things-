@@ -24,7 +24,7 @@ IG_PATH = "M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2
 
 # Single prints: [file in images/prints, alt text, title]
 PRINTS = json.load(open(os.path.join(ROOT, "tools", "prints.json")))
-PRINT_BY_TITLE = {t: (f, a) for f, a, t in PRINTS}
+PRINT_BY_TITLE = {t: (f, a) for f, a, t, *_ in PRINTS}
 
 
 def P(title):
@@ -54,11 +54,11 @@ _OLD_GALLERIES = [
         P("Mural Reflection"),
     ]),
     ("signs", "Signs and Neon", "Ghost signs, marquees and neon that give Atlanta its character.", [
-        P("Majestic Diner"), P("The Fox"), P("The Varsity"), P("Motor Hotel, Black and White"),
+        P("Majestic Diner"), P("The Fox"), P("The Varsity"), P("Motor Hotel"),
         F("clermont", "The Clermont Hotel neon sign glowing against a blue night sky", "Clermont"),
         F("birdcage", "A pink neon 'Birdcage' sign on a white wall above a blue bench", "Birdcage"),
         F("ponce-at-night", "Ponce City Market's tower lit up at night", "Ponce at Night"),
-        P("Ponce City Market"), P("Motor Hotel, Afternoon"), P("Clermont Nights"),
+        P("Ponce City Market"), P("Motor Hotel, Morning"), P("Clermont Nights"),
         F("drink-coca-cola", "A faded hand-painted Drink Coca-Cola ad on a brick wall", "Drink Coca-Cola"),
         F("ice-cold", "A painted 'Ice Cold Coca-Cola Sold Here' sign", "Ice Cold"),
         F("manuels-tavern", "The painted Manuel's Tavern sign on a brick wall at night", "Manuel's Tavern"),
@@ -195,7 +195,7 @@ GALLERIES = [
         F("cathedral-garden", "A cathedral spire rising behind clipped yew trees and white flowers under a blue sky", "Cathedral Garden"),
         F("riomaggiore", "Pastel houses stacked up a steep green valley in Riomaggiore, Italy, with a church bell tower on the left", "Riomaggiore")]),
     ("things", "Things", "Signs, neon, cars and the buildings around them.", G(
-        "The Fox", "The Varsity", "Old Cadillac", "Motor Hotel, Black and White", "Atrium", "Ponce at Night", "Ribbed Corridor", "Ponce City Market", "Hood Ornament", "Miller's Rexall", "Motor Hotel, Afternoon", "Clermont Nights", "Swing Ride", "Georgia Girl",
+        "The Fox", "The Varsity", "Old Cadillac", "Motor Hotel", "Atrium", "Ponce at Night", "Ribbed Corridor", "Ponce City Market", "Hood Ornament", "Miller's Rexall", "Motor Hotel, Morning", "Clermont Nights", "Swing Ride", "Georgia Girl",
         "Passing Train", "Mural Reflection") + [
         F("red-car", "A red sports car parked alone at the end of an empty, weathered concrete garage", "Red Car"),
         F("in-bottles", "A red vintage Coca-Cola machine beside a sticker-covered door in a dim bar", "In Bottles"),
@@ -528,12 +528,13 @@ def build_prints():
       </div>
     </article>""" % (" two" if n == 4 else "", 2 if n == 4 else n, ";--ar:3/2" if wide else "", thumbs, e(name), e(blurb), e(names), count, size_select("Size for " + name), EMAIL))
     singles = []
-    for f, alt, title in PRINTS:
+    for f, alt, title, place in PRINTS:
         singles.append("""    <article class="print">
       %s
       <h3>%s</h3>
+      <p class="place">%s</p>
       <div class="buy">%s <a class="btn" href="mailto:%s">Buy</a></div>
-    </article>""" % (img(("prints/" + f, alt, title), zoom=True), e(title), size_select("Size for " + title), EMAIL))
+    </article>""" % (img(("prints/" + f, alt, title), zoom=True), e(title), e(place), size_select("Size for " + title), EMAIL))
     body = """<main>
   <h1 class="page-title">Prints</h1>
   <p class="note">Every print is made to order on premium papers with pigment inks. Choose a size and click Buy to send me an order request, and I'll reply with the price and details.</p>

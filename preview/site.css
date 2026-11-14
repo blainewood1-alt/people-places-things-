@@ -94,7 +94,8 @@ h2{font-size:1.8rem;margin:0 0 8px}
 .grid{columns:3 280px;column-gap:36px}
 .print{break-inside:avoid;margin-bottom:44px}
 .print img{width:100%;height:auto;display:block;background:#ddd}
-.print h3{margin:14px 0 4px;font-size:1.2rem}
+.print h3{margin:14px 0 2px;font-size:1.2rem}
+.print .place{margin:0 0 8px;font-family:var(--sans);font-size:.85rem;color:var(--muted)}
 
 /* about + contact */
 .about{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}
