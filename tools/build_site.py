@@ -172,14 +172,14 @@ GALLERIES = [
         F("steampunk", "A woman in steampunk costume, white round sunglasses and a feather collar posing on a city sidewalk at night", "Steampunk"),
         F("light-rider", "A rider in a helmet on a lit-up electric skateboard towing a speaker through the dark street", "Light Rider")],
         # Sequence: dawn to night, alternating black-and-white and color.
-        "Lone Angler", "The Fisherman", "River Crossing", "Morning Walk", "Peace Dove",
+        "Lone Angler", "Half Light", "The Fisherman", "River Crossing", "Morning Walk", "Peace Dove",
         "Over the Shoulder", "Platform", "Long Shadow", "Red Bike", "Into the Light",
         "Red Sweater", "Window Shopping", "The Barber", "Market Day", "On Horseback",
         "Rodeo Clown", "The Cowboy", "Three in Black", "Street Chess", "Looking Up",
         "Bench in the Light", "Waiting for a Set", "Paddle Out", "Sun Seeker", "Unspoken",
         "The Dive", "Splash Pad", "The Crowd", "Stone Steps", "Champions",
         "On the Edge", "Surf Cart", "Platinum", "Two at Dusk", "Gray Beanie", "Birdcage",
-        "Night Parade", "No Parking", "Curlers", "Steampunk", "In the Window", "After Hours", "Half Light", "Weathered",
+        "Night Parade", "No Parking", "Curlers", "Steampunk", "In the Window", "After Hours", "Weathered",
         "Blue Eyes", "Light Rider", "On the Tracks", "The Doorway", "In the Woods", "Afternoon Nap")),
     ("places", "Places", "From Atlanta and beyond...", G(
         "Karst Valley", "Skyline Rays", "Lone Cypress", "Windswept",
