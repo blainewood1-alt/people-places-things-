@@ -303,7 +303,7 @@ COMMISSIONS = [
 SET_PLACES = {
     "Quiet Coast": "Southern California", "In Motion": "Atlanta, GA", "Surf Town": "Southern California",
     "On the Pier": "Okaloosa Island, FL", "Red Light": "Atlanta, GA", "Into the Pines": "Pensacola, FL",
-    "Gulf Coast on Film": "Okaloosa Island, FL",
+    "Gulf Coast on Film": "Okaloosa Island, FL", "Atlanta Gold": "Atlanta, GA",
 }
 SETS = [
     ("Quiet Coast", "Lone figures and a single cypress set against wide, bright, empty space.", [
@@ -337,6 +337,10 @@ SETS = [
         F("gulf-white-sand", "White sand and golden dune grass under a clear blue sky, a pier in the distance", "White Sand"),
         F("gulf-sea-oats", "Sea oats on a sand dune in low evening light", "Sea Oats"),
         F("gulf-lone-palm", "The sun flaring through a lone palm in the dunes", "Lone Palm")]),
+    ("Atlanta Gold", "Late-day sun across three Atlanta landmarks.", [
+        F("atl-food-that-pleases", "Red neon signs on a corner diner lit by low sun under power lines", "Food That Pleases"),
+        F("atl-smokestacks", "A red brick mill and two tall smokestacks glowing in the last light", "Smokestacks"),
+        F("atl-midtown-reflection", "Golden skyscrapers reflected in a dark lake, framed by tree branches", "Midtown Reflection")]),
 ]
 
 # ---------- helpers ----------
