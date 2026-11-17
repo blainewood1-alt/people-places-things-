@@ -1,4 +1,4 @@
-# Blaine Wood Photo
+# Blaine Wood | Photo
 
 People + Places + Things. Photography portfolio and print shop for Blaine, a photographer based in Atlanta, GA.
 

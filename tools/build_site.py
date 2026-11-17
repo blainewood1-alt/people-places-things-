@@ -1,4 +1,4 @@
-"""Builds the Blaine Wood Photo pages from the lists below.
+"""Builds the Blaine Wood | Photo pages from the lists below.
 
 Run:  python3 tools/build_site.py            (writes the site to the repo root)
       python3 tools/build_site.py preview    (writes a preview copy to preview/)
@@ -400,7 +400,7 @@ def page(fname, title, body, desc, lightbox=False, extra_js=""):
 </head>
 <body id="top">
 <header class="site-header">
-  <a class="logo" href="index.html"><span class="logo-text">Blaine Wood Photo<span>People + Places + Things</span></span></a>
+  <a class="logo" href="index.html"><span class="logo-text">Blaine Wood | Photo<span>People + Places + Things</span></span></a>
   <nav aria-label="Main">
 %s
   </nav>
@@ -411,7 +411,7 @@ def page(fname, title, body, desc, lightbox=False, extra_js=""):
     <a href="%s" target="_blank" rel="noopener" aria-label="Blaine on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="%s"/></svg><span>Instagram</span></a>
     <a href="%s" target="_blank" rel="noopener" aria-label="Blaine on Foto"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 8a2 2 0 0 1 2-2h2.5l1.5-2h6l1.5 2H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="4"/></g></svg><span>Foto</span></a>
   </div>
-  <p>&copy; %d Blaine Wood Photo &middot; Atlanta, GA &middot; <a href="mailto:%s">%s</a></p>
+  <p>&copy; %d Blaine Wood | Photo &middot; Atlanta, GA &middot; <a href="mailto:%s">%s</a></p>
 </footer>%s%s
 </body>
 </html>
@@ -428,7 +428,7 @@ def size_select(label):
 def build_home():
     body = """<section class="hero" style="background-image:url('%simages/hero.jpg')">
   <div>
-    <h1>Blaine Wood Photo</h1>
+    <h1>Blaine Wood | Photo</h1>
     <p>People, places and things around Atlanta and beyond.</p>
   </div>
 </section>
@@ -454,7 +454,7 @@ def build_home():
     </div>
   </section>
 </main>""" % (UP, EMAIL)
-    page("index.html", "Blaine Wood Photo | Atlanta photography", body,
+    page("index.html", "Blaine Wood | Photo · Atlanta photography", body,
          "Street, places and portrait photography by Blaine Wood in Atlanta, GA, with fine art prints for sale.")
 
 
@@ -510,7 +510,7 @@ def build_portfolio():
   <p class="cta" id="prints-cta">Like something you see? <a href="prints.html">Most of these are available as prints.</a></p>
   <p class="to-top"><a class="btn" href="#top">Back to top &uarr;</a></p>
 </main>""" % (chips, "\n".join(secs))
-    page("portfolio.html", "Portfolio | Blaine Wood Photo", body,
+    page("portfolio.html", "Portfolio · Blaine Wood | Photo", body,
          "Galleries of street, signs and neon, places, silhouettes, faces and film photography by Blaine Wood.",
          lightbox=True)
 
@@ -581,7 +581,7 @@ document.querySelectorAll('.set, .print').forEach(function (card) {
   });
 });
 </script>""" % EMAIL
-    page("prints.html", "Prints | Blaine Wood Photo", body,
+    page("prints.html", "Prints · Blaine Wood | Photo", body,
          "Fine art prints and print sets by Atlanta photographer Blaine Wood, from 8 x 12 to 24 x 36 inches.",
          lightbox=True, extra_js=js)
 
@@ -610,7 +610,7 @@ def build_about():
     </div>
   </div>
 </main>""" % (UP, EMAIL)
-    page("about.html", "About | Blaine Wood Photo", body,
+    page("about.html", "About · Blaine Wood | Photo", body,
          "About Blaine Wood, a hobbyist photographer in Atlanta, GA shooting with a Leica M11.")
 
 
@@ -636,7 +636,7 @@ def build_contact():
     </div>
   </div>
 </main>""" % (EMAIL, EMAIL, EMAIL, EMAIL, EMAIL)
-    page("contact.html", "Contact | Blaine Wood Photo", body,
+    page("contact.html", "Contact · Blaine Wood | Photo", body,
          "Get in touch with Blaine Wood about prints, portraits, events or projects.")
 
 
